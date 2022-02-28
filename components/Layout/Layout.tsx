@@ -1,11 +1,15 @@
 import React from 'react'
 import { Navbar, FooterContainer } from '@components/index'
 
-export const Layout = ({ children }) => {
+export interface LayoutProps {
+  children: any
+}
+
+export const Layout = (props: LayoutProps) => {
   return (
     <div className='layout-container'>
       <Navbar />
-      {children}
+      {props.children}
       <FooterContainer />
     </div>
   )
