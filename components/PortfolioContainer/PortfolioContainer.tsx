@@ -1,18 +1,14 @@
-import React from 'react'
-import { PortfolioCard } from '@components/index'
+import React from "react";
+import { BlogCard } from "@components/index";
 
 export const PortfolioContainer = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        width: "100%",
-      }}
-      id="portfolio-home"
-    >
-      
-      <PortfolioCard />
-      <PortfolioCard />
+    <div className="portfolio-home-container" id="portfolio-home">
+      <h1 className="blog-home-title">Projects</h1>
+      <div className="blog-home-cards-container">
+        <BlogCard />
+        <BlogCard />
+      </div>
     </div>
-  )
-}
+  );
+};

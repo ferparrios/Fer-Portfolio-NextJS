@@ -2,9 +2,9 @@ import React from "react";
 
 export const ContactForm = () => {
   return (
-    <div>
+    <div className="contact-form-home-container">
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
           Email address
         </label>
         <input
@@ -15,14 +15,18 @@ export const ContactForm = () => {
         />
       </div>
       <div className="mb-3">
-        <label for="exampleFormControlTextarea1" className="form-label">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">
           Example textarea
         </label>
         <textarea
           className="form-control"
           id="exampleFormControlTextarea1"
-          rows="3"
+          rows="5"
         ></textarea>
+      </div>
+
+      <div>
+        <input type="submit" value="Send Message" />
       </div>
     </div>
   );
