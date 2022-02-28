@@ -15,12 +15,12 @@ a {
   box-sizing: border-box;
 }
 
-.languaje-container{
-  position: absolute!important;
+.languaje-container {
+  position: absolute !important;
   right: 30px;
 }
 
-.dropdown-menu-show{
+.dropdown-menu-show {
   position: absolute;
   z-index: 1000;
   display: block;
@@ -33,6 +33,65 @@ a {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+}
+
+/* 
+  Profile Card
+*/
+
+.profile-card {
+  border: none;
+  margin: 10% auto;
+}
+
+.profile-card-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card-image {
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  max-width: 250px;
+}
+
+.profile-card-text-container {
+  background-color: black;
+  padding: 0 10%;
+  margin-top: 2.3rem;
+}
+
+.profile-card-title {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.profile-card-text {
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 426px) {
+  .profile-card-text-container {
+    padding: 0 20%;
+  }
+
+  .profile-card-text {
+    font-size: 1rem;
+  }
+
+  .profile-card-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1439px) {
+  .profile-card-text-container {
+    padding: 0 30%;
+  }
 }

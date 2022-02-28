@@ -1,13 +1,26 @@
-import React from "react";
+import React,  {useEffect} from "react";
+import { useProfileCard } from "./ProfileCardHooks";
+// import ferPhoto from '../../public/images/fer-profile-photo.jpeg'
+
 
 export const ProfileCard = () => {
+
+  const {
+    profileImage
+  } = useProfileCard()
+
+  
+  
   return (
-    <div className="card" style={{ width: 540, margin: "10% auto" }}>
-      <img src="..." className="card-img-top" alt="..." />
-      <div className="card-body">
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+    <div className="profile-card">
+      <div className="profile-card-image-container">
+        <img src={profileImage} className="profile-card-image" alt="..." />
+      </div>
+      <div className="profile-card-text-container">
+        <h1 className="profile-card-title">Hello, I'm Fer</h1>
+        <p className="profile-card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, eius tempore, sed labore aliquam molestias, dolorum quasi ad repellendus voluptate iste laboriosam porro voluptatum rerum eum reiciendis adipisci perspiciatis id!
+          Sit voluptas odit nesciunt ab voluptate enim quas optio dolorem, soluta id ad sequi beatae quasi magni laudantium architecto et ex distinctio eos consequatur placeat maiores repudiandae quaerat! Ipsam, ea?
         </p>
       </div>
     </div>
