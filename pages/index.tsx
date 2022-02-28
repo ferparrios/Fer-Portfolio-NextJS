@@ -12,12 +12,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div className={styles.container}>
+      
         <ProfileCard />
-        <BlogHome />
+        <div className="blog-home-index-container">
+          <BlogHome />
+        </div>
         <PortfolioContainer />
         <ContactContainer />
-      </div>
+      
     </Layout>
   );
 };

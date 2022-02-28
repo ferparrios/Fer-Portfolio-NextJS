@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [clickContact, setClickContact] = useState(false)
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container navbar-layout">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Fernando Paredes Rios

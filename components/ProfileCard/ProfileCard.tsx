@@ -1,6 +1,5 @@
 import React,  {useEffect} from "react";
 import { useProfileCard } from "./ProfileCardHooks";
-// import ferPhoto from '../../public/images/fer-profile-photo.jpeg'
 
 
 export const ProfileCard = () => {

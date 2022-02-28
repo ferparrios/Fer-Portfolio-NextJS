@@ -1,15 +1,14 @@
 import React from "react";
+import surtidoLogo from "../../public/images/surtido_logo.png"
 
 export const BlogCard = () => {
   return (
-    <div style={{backgroundColor: "black", height: 400, alignItems: "center", display: "flex", width: "50%"}}>
-      <div
-        className="card bg-light text-black"
-        style={{ height: 250, width: "90%", margin: "0 auto" }}
-      >
-        <img src="..." className="card-img" alt="..." />
+    <div className="blog-card-container">
+      <div className="card bg-ligh text-black blog-card-container-inside" >
+        <img src="https://surtido.pe/wp-content/themes/surtido-v3/img/bg/Marquesina-surtido-500.png" className="card-img blog-card-background-image" alt="..." />
         <div className="card-img-overlay">
           <h5 className="card-title">Card title</h5>
+          <img src={surtidoLogo} className="" alt="..." />
           <p className="card-text">
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This content is a little bit longer.
