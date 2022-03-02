@@ -1,6 +1,7 @@
 import { Layout, ProjectsCard } from '@components/index'
 import { webDevData } from 'banners-data'
 import React from 'react'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const WebProjects = () => {
   return (

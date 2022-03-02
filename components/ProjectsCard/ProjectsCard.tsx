@@ -17,12 +17,12 @@ export const ProjectsCard = (props: ProjectCardProps) => {
       <div className="projects-card-image-container">
         <img
           src={props.image}
-          className="img-fluid rounded-start projects-card-image"
+          className="projects-card-image"
           alt="..."
         />
       </div>
 
-      <div className="">
+      <div className="projects-card-content-container">
         <div className="card-body">
           <h2 className="projects-card-title">
             <b>Proyecto:</b> <br />
