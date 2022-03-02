@@ -5,7 +5,6 @@ import React from 'react'
 const WebProjects = () => {
   return (
     <Layout>
-      {/* <ProjectsCard /> */}
       {
         webDevData.map((i, index) => (
           <ProjectsCard 

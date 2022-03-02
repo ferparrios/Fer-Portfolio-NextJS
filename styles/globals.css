@@ -323,3 +323,37 @@ a {
     align-items: center;
   }
 }
+
+/* Projects-Card */
+
+.projects-card-container {
+  max-width: 1040px;
+  margin: 5% auto;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+.projects-card-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-card-image {
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 768px) {
+  .projects-card-image {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-card-container {
+    display: flex;
+    margin: 20px auto;
+  } 
+}

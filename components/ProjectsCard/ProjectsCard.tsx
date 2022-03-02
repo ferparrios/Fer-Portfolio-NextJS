@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export interface ProjectCardProps {
@@ -11,35 +12,48 @@ export interface ProjectCardProps {
 
 export const ProjectsCard = (props: ProjectCardProps) => {
   return (
-    <div className="card mb-3" style={{ maxWidth: 1040, margin: "5% auto" }}>
-      <div className="row g-0">
-        <div className="col-md-8">
-          <img
-            src={props.image}
-            className="img-fluid rounded-start"
-            alt="..."
-          />
-        </div>
-        <div className="col-md-4">
-          <div className="card-body">
-            <h5 className="card-title">{props.title}</h5>
-            <p className="card-text">{props.description}</p>
-            <p className="card-text">
-              <small className="text-muted">{props.tecnologies}</small>
-            </p>
-            {props.productionLink && (
-              <p className="card-text">
-                <small className="text-muted">{props.productionLink}</small>
-              </p>
-            )}
-            {props.githubLink && (
-              <p className="card-text">
-                <small className="text-muted">{props.githubLink}</small>
-              </p>
-            )}
-          </div>
+    <div className="projects-card-container">
+      {/* <div className="row g-0"> */}
+      <div className="projects-card-image-container">
+        <img
+          src={props.image}
+          className="img-fluid rounded-start projects-card-image"
+          alt="..."
+        />
+      </div>
+
+      <div className="">
+        <div className="card-body">
+          <h2 className="projects-card-title">
+            <b>Proyecto:</b> <br />
+            {props.title}
+          </h2>
+          <p className="projects-card-text">
+            <b>Description:</b> <br /> {props.description}
+          </p>
+          <p className="projects-card-text">
+            <b>Tecnologías Usadas:</b> <br /> {props.tecnologies}
+          </p>
+          {props.productionLink && (
+            <div>
+              <p className="projects-card-text">Enlace:</p>
+              <Link href={props.productionLink}>
+                <a>{props.productionLink}</a>
+              </Link>
+            </div>
+          )}
+          {props.githubLink && (
+            <div>
+              <p className="projects-card-text">Repositorio:</p>
+              <Link href={props.githubLink}>
+                <a>{props.githubLink}</a>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
+
+      {/* </div> */}
     </div>
   );
 };
