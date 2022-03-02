@@ -1,17 +1,18 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 export const Navbar = () => {
   const [dropdownActive, setDropdownActive] = useState(false);
   const [clickBlog, setClickMenu] = useState(false);
-  const [clickPortfolio, setClickPortfolio] = useState(false)
-  const [clickContact, setClickContact] = useState(false)
+  const [clickPortfolio, setClickPortfolio] = useState(false);
+  const [clickContact, setClickContact] = useState(false);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container ">
       <div className="container-fluid navbar-layout">
-        <a className="navbar-brand" href="#">
-          Fernando Paredes Rios
-        </a>
+        <Link href="/">
+          <a className="navbar-brand">Fernando Paredes Rios</a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -26,44 +27,47 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a
-                className={clickBlog ? "nav-link active" : "nav-link"}
-                aria-current="page"
-                href="#blog-home"
-                onClick={() => {
-                  setClickMenu(true);
-                  setClickPortfolio(false);
-                  setClickContact(false);
-                }}
-              >
-                Blog
-              </a>
+              <Link href="#blog-home">
+                <a
+                  className={clickBlog ? "nav-link active" : "nav-link"}
+                  aria-current="page"
+                  onClick={() => {
+                    setClickMenu(true);
+                    setClickPortfolio(false);
+                    setClickContact(false);
+                  }}
+                >
+                  Blog
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className={clickPortfolio ? "nav-link active" : "nav-link"}
-                href="#portfolio-home"
-                onClick={() => {
-                  setClickMenu(false);
-                  setClickPortfolio(true);
-                  setClickContact(false);
-                }}
-              >
-                Portfolio
-              </a>
+              <Link href="#portfolio-home">
+                <a
+                  className={clickPortfolio ? "nav-link active" : "nav-link"}
+                  onClick={() => {
+                    setClickMenu(false);
+                    setClickPortfolio(true);
+                    setClickContact(false);
+                  }}
+                >
+                  Portfolio
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className={clickContact ? "nav-link active" : "nav-link"}
-                href="#contact-home"
-                onClick={() => {
-                  setClickMenu(false);
-                  setClickPortfolio(false);
-                  setClickContact(true);
-                }}
-              >
-                Contact
-              </a>
+              <Link href="#contact-home">
+                <a
+                  className={clickContact ? "nav-link active" : "nav-link"}
+                  onClick={() => {
+                    setClickMenu(false);
+                    setClickPortfolio(false);
+                    setClickContact(true);
+                  }}
+                >
+                  Contact
+                </a>
+              </Link>
             </li>
             <li className="nav-item dropdown languaje-container">
               <a

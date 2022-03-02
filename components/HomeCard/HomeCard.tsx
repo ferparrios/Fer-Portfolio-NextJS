@@ -1,27 +1,39 @@
+import Link from "next/link";
 import React from "react";
 
-export const BlogCard = () => {
+
+interface HomeCardProps {
+  backgroundImage: string
+  title: string
+  referenceLink: string
+  referenceImage: string
+  link: string
+}
+
+export const HomeCard = (props: HomeCardProps) => {
   return (
     <div className="blog-card-container">
       <div className="card bg-ligh text-black blog-card-container-inside">
         <img
-          src="https://surtido.pe/wp-content/themes/surtido-v3/img/bg/Marquesina-surtido-500.png"
+          src={props.backgroundImage}
           className="card-img blog-card-background-image"
-          alt="..."
+          alt={props.referenceLink}
         />
         <div className="card-img-overlay blog-card-content-container">
           <div className="blog-card-inside-content">
             <div className="blog-card-inside-content-text-container">
-              <p className="blog-card-inside-text">Check my posts on</p>
+              <p className="blog-card-inside-text">{props.title}</p>
               <p className="blog-card-inside-text-link">
-                <a href="">Surtido.pe</a>
+                <Link href={props.link}>
+                <a >{props.referenceLink}</a>
+                </Link>
               </p>
             </div>
             <div className="blog-card-inside-image-container">
               <img
-                src="https://pbs.twimg.com/profile_images/1329804285446598658/vothULxS_400x400.jpg"
+                src={props.referenceImage}
                 className="blog-card-inside-image"
-                alt="..."
+                alt={props.referenceLink}
               />
             </div>
           </div>

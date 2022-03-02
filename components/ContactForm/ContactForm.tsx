@@ -21,7 +21,7 @@ export const ContactForm = () => {
         <textarea
           className="form-control"
           id="exampleFormControlTextarea1"
-          // rows="5"
+          rows="5"
         ></textarea>
       </div>
 
