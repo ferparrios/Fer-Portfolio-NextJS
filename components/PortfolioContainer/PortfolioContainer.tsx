@@ -7,13 +7,14 @@ export const PortfolioContainer = () => {
     <div className="portfolio-home-container" id="portfolio-home">
       <h1 className="blog-home-title">Projects</h1>
       <div className="blog-home-cards-container">
-      {portfolioData.map((i) => (
+      {portfolioData.map((i, index) => (
           <HomeCard 
             title={i.title}
             backgroundImage={i.backgroundImage}
             referenceLink={i.referenceLink}
             referenceImage={i.referenceImage}
             link={i.link}
+            key={index}
           />
         ))}
       </div>

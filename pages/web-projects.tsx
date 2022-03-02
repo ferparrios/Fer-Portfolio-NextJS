@@ -7,7 +7,7 @@ const WebProjects = () => {
     <Layout>
       {/* <ProjectsCard /> */}
       {
-        webDevData.map((i) => (
+        webDevData.map((i, index) => (
           <ProjectsCard 
             description={i.description}
             githubLink={i.githubLink}
@@ -15,6 +15,7 @@ const WebProjects = () => {
             productionLink={i.productionLink}
             tecnologies={i.tecnologies}
             title={i.title}
+            key={index}
           />
         ))
       }
