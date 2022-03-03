@@ -335,7 +335,6 @@ a {
 }
 
 .projects-card-image-container {
-  /* width: 100%; */
   display: flex;
   justify-content: space-between;
 }
