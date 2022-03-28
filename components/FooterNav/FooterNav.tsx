@@ -10,16 +10,16 @@ export const FooterNav = () => {
 
         <ul className="footer-links-list">
           <li>
-            <a href="">Twitter</a>
+            <a href="https://twitter.com/ferparrios">Twitter</a>
           </li>
           <li>
-            <a href="">Instagram</a>
+            <a href="https://www.instagram.com/ferparrios/">Instagram</a>
           </li>
           <li>
-            <a href="">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/fparedesr112/">LinkedIn</a>
           </li>
           <li>
-            <a href="">Github</a>
+            <a href="https://github.com/ferparrios">Github</a>
           </li>
         </ul>
       </div>

@@ -348,6 +348,14 @@ a {
   width: 100%;
 }
 
+.projects-card-prod-link{
+  line-break: anywhere;
+}
+
+.projects-card-technologies-list-item{
+  line-height: 0.3;
+}
+
 @media (min-width: 768px) {
   .projects-card-image {
     height: 400px;

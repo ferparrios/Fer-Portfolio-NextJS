@@ -35,6 +35,96 @@ export const portfolioData = [
 
 export const webDevData = [
   {
+    image: "images/web-projects/project14.png",
+    title: "News Searcher",
+    githubLink: "https://github.com/ferparrios/React-News-Search",
+    productionLink: "https://react-news-search.vercel.app/",
+    description: "A site to check the last news online",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project13.png",
+    title: "Car Insurance Quote",
+    githubLink: "https://github.com/ferparrios/React-Cotization-Tool",
+    productionLink: "https://eager-cori-900928.netlify.app/",
+    description: "A site generate a cotization for a Insurance for cars",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project12.jpeg",
+    title: "Breaking Bad Phrases Site",
+    githubLink: "https://github.com/ferparrios/React-Breaking-Bad-Quote",
+    productionLink: "https://wonderful-pike-2a69bb.netlify.app/",
+    description: "A site to obtain a phrase of Braking Bad",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project11.png",
+    title: "React Wheater App",
+    githubLink: "https://github.com/ferparrios/React-Weather-App",
+    productionLink: "https://jolly-chandrasekhar-d2228f.netlify.app/",
+    description: "A site for check the weather of your city",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project10.png",
+    title: "Cryto Cotization Site",
+    githubLink: "https://github.com/ferparrios/React-Crypto-Quote",
+    productionLink: "https://pedantic-mirzakhani-ff9568.netlify.app/",
+    description: "A site to check the value of Crypto currency wit the money of your country",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project9.png",
+    title: "Vet's Date Appointment",
+    githubLink: "https://github.com/ferparrios/React-Appointment-Management",
+    productionLink: "https://determined-banach-c646cf.netlify.app/",
+    description: "A site for create a dat with the vet",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project8.png",
+    title: "Image Searcher",
+    githubLink: "https://github.com/ferparrios/React-Image-Searcher",
+    productionLink: "https://awesome-euler-02ab04.netlify.app/",
+    description: "A site for finding images",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project7.png",
+    title: "Lyrics Searcher",
+    githubLink: "https://github.com/ferparrios/React-Lyrucs-Searcher",
+    productionLink: "https://pensive-hawking-37060d.netlify.app/",
+    description: "A site for find tje lyrics of your favorites songs",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project6.png",
+    title: "Drink Receip Searcher",
+    githubLink: "https://github.com/ferparrios/React-Drinks-Searcher",
+    productionLink: "https://affectionate-lewin-131537.netlify.app/",
+    description: "A searcher for receips of drinks",
+    tecnologies: [
+      "React", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
     image: "images/web-projects/project3.png",
     title: "Veterinaria Animalia",
     githubLink: "",
@@ -84,4 +174,17 @@ export const webDevData = [
       "WordPress", "PHP", "JavaScript", "HTML", "CSS"
     ]
   },
+]
+
+export const mobileProjectsData = [
+  {
+    image: "images/mobile-projects/m-project1.png",
+    title: "Backcountry App",
+    githubLink: "",
+    productionLink: "https://apps.apple.com/us/app/backcountry-outdoor-gear/id450920999",
+    description: "Backcountry Mobile App",
+    tecnologies: [
+      "React Native", "Typescript", "Mobx", "Android", "iOS"
+    ]
+  }
 ]
