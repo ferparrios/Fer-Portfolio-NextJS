@@ -18,7 +18,7 @@ export const ProfileCard = () => {
       <div className="profile-card-text-container">
         <h1 className="profile-card-title">Hello, I am Fer</h1>
         <p className="profile-card-text">
-          Hello, I'm Fer, I'm a frontend developer with over than 5 years of experience in web projects, currently I work with React and React Native. If you like my job please contact me in all social media like @ferparrios.
+          Hello, I am Fer, I work as a frontend developer with over than 5 years of experience in web projects, currently I work with React and React Native. If you like my job please contact me in all social media like @ferparrios.
         </p>
       </div>
     </div>

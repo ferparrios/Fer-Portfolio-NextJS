@@ -42,8 +42,8 @@ export const ProjectsCard = (props: ProjectCardProps) => {
             <b>Used Technologies:</b> <br /> 
           </p>
           {
-            props.tecnologies.map(e => (
-                <ul>
+            props.tecnologies.map((e, index) => (
+                <ul key={index}>
                   <li className="projects-card-technologies-list-item">{e}</li>
                 </ul>
               ))
