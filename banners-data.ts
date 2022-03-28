@@ -35,20 +35,14 @@ export const portfolioData = [
 
 export const webDevData = [
   {
-    image: "images/web-projects/project2.png",
-    title: "Telefonica Educación Digital - Proyecto Educared",
-    githubLink: "",
-    productionLink: "educared.com.pe",
-    description: "Educared, proyecto de fundación Telefónica",
-    tecnologies: "WordPress, PHP, JavaScript, HTML, CSS"
-  },
-  {
     image: "images/web-projects/project3.png",
-    title: "Veterinaria Animalia, eCommerce",
+    title: "Veterinaria Animalia",
     githubLink: "",
-    productionLink: "animalia.pe",
+    productionLink: "https://animalia.com.pe/",
     description: "Ecommerce de la Veterinaria animalia",
-    tecnologies: "WordPress, PHP, JavaScript, HTML, CSS"
+    tecnologies: [
+      "WordPress", "PHP", "JavaScript", "HTML", "CSS"
+    ]
   },
   {
     image: "images/web-projects/project4.png",
@@ -56,22 +50,38 @@ export const webDevData = [
     githubLink: "",
     productionLink: "valor.com.pe",
     description: "Website de la Agencia Valor",
-    tecnologies: "WordPress, PHP, JavaScript, HTML, CSS"
+    tecnologies: [
+      "WordPress", "PHP", "JavaScript", "HTML", "CSS"
+    ]
   },
   {
     image: "images/web-projects/project5.png",
-    title: "Villaplanet Landing Page",
+    title: "Educared - Villaplanet Landing Page",
     githubLink: "",
-    productionLink: "educared.com.pe/villaplanet",
+    productionLink: "https://educared.fundaciontelefonica.com.pe/villaplanet/",
     description: "Landing page para Villaplanet, proyecto de Educared",
-    tecnologies: "WordPress, PHP, JavaScript, HTML, CSS"
+    tecnologies: [
+      "WordPress", "PHP", "JavaScript", "HTML", "CSS"
+    ]
+  },
+  {
+    image: "images/web-projects/project2.png",
+    title: "Educared, Fundación Telefónica",
+    githubLink: "",
+    productionLink: "https://educared.fundaciontelefonica.com.pe/",
+    description: "Educared, proyecto de fundación Telefónica",
+    tecnologies: [
+      "WordPress", "PHP", "JavaScript", "HTML", "CSS"
+    ]
   },
   {
     image: "images/web-projects/project1.png",
-    title: "DimensoftWeb",
+    title: "Dimensoft",
     githubLink: "",
     productionLink: "https://dimensoft.pe",
     description: "Dimensoft Old version made with WordPress",
-    tecnologies: "WordPress, PHP, JavaScript, HTML, CSS"
+    tecnologies: [
+      "WordPress", "PHP", "JavaScript", "HTML", "CSS"
+    ]
   },
 ]

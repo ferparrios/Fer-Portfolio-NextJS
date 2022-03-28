@@ -7,10 +7,18 @@ export interface ProjectCardProps {
   githubLink?: string;
   productionLink?: string;
   description: string;
-  tecnologies: string;
+  tecnologies: string[];
 }
 
 export const ProjectsCard = (props: ProjectCardProps) => {
+
+  // const array1 = props.tecnologies.forEach(e => (<p>e</p>))
+
+  const array1 = props.tecnologies.forEach(e => (
+    <ul>
+      <li>{e}</li>
+    </ul>
+  ))
   return (
     <div className="projects-card-container">
       {/* <div className="row g-0"> */}
@@ -32,8 +40,9 @@ export const ProjectsCard = (props: ProjectCardProps) => {
             <b>Description:</b> <br /> {props.description}
           </p>
           <p className="projects-card-text">
-            <b>Tecnologías Usadas:</b> <br /> {props.tecnologies}
+            <b>Tecnologías Usadas:</b> <br /> 
           </p>
+          {array1}
           {props.productionLink && (
             <div>
               <p className="projects-card-text">Enlace:</p>
