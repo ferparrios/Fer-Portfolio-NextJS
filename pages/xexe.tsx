@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "../components/Layout/Layout";
 
 const xexe = () => {
   return (
-    <div>xexe</div>
-  )
-}
 
-export default xexe
+      <div style={{color: "white"}}>a b c d efghijklmnopqrstuvwxyz</div>
+
+  );
+};
+
+export default xexe;

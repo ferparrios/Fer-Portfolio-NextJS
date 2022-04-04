@@ -8,19 +8,19 @@ import {
 } from "@components/index";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Home: NextPage = () => {
-
   Swal.fire({
-    title: 'Attention!',
-    text: 'the page is still under development, so you may find one or two errors, it will be completed soon, have a nice day :)',
-    icon: 'info',
-    confirmButtonText: 'Done'
-  })
+    title: "Attention!",
+    text: "the page is still under development, so you may find one or two errors, it will be completed soon, have a nice day :)",
+    icon: "info",
+    confirmButtonText: "Done",
+  });
 
   return (
-    <Layout>
+    // <Layout>
+    <>
       <ProfileCard />
       <div className="blog-home-index-container">
         <BlogHome />
@@ -29,7 +29,8 @@ const Home: NextPage = () => {
       <div className="blog-home-index-container">
         <ContactContainer />
       </div>
-    </Layout>
+    </>
+    // </Layout>
   );
 };
 

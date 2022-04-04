@@ -5,8 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const WebProjects = () => {
   return (
-    <Layout>
-      {
+    // <Layout>
+      <>
+        {
         webDevData.map((i, index) => (
           <ProjectsCard 
             description={i.description}
@@ -19,7 +20,8 @@ const WebProjects = () => {
           />
         ))
       }
-    </Layout>
+      </>
+    // </Layout>
   )
 }
 

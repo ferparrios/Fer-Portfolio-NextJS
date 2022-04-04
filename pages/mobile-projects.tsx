@@ -4,8 +4,9 @@ import React from 'react'
 
 const MobileProjects = () => {
   return (
-    <Layout>
-      {
+    // <Layout>
+      <>
+        {
         mobileProjectsData.map((i, index) => (
           <ProjectsCard 
             description={i.description}
@@ -18,7 +19,8 @@ const MobileProjects = () => {
           />
         ))
       }
-    </Layout>
+      </>
+    // </Layout>
   )
 }
 
