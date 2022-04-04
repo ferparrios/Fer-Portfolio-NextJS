@@ -9,14 +9,19 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Swal from "sweetalert2";
+// import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-  Swal.fire({
-    title: "Attention!",
-    text: "the page is still under development, so you may find one or two errors, it will be completed soon, have a nice day :)",
-    icon: "info",
-    confirmButtonText: "Done",
-  });
+  // Swal.fire({
+  //   title: "Attention!",
+  //   text: "the page is still under development, so you may find one or two errors, it will be completed soon, have a nice day :)",
+  //   icon: "info",
+  //   confirmButtonText: "Done",
+  // });
+
+  // const { locale, locales } = useRouter()
+  // console.log("Locale: ", locale)
+  // console.log("Available Locales: ", locales)
 
   return (
     // <Layout>

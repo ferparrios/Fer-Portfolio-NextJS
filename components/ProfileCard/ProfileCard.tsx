@@ -1,3 +1,7 @@
+import { en } from "i18n/en";
+import { es } from "i18n/es";
+import { fr } from "i18n/fr";
+import { useRouter } from "next/router";
 import React,  {useEffect} from "react";
 import { useProfileCard } from "./ProfileCardHooks";
 
@@ -8,6 +12,11 @@ export const ProfileCard = () => {
     profileImage
   } = useProfileCard()
 
+  const { locale, locales, defaultLocale } = useRouter();
+  // console.log("Locale: ", locale);
+  // console.log("Available Locales: ", locales);
+  // console.log("Defaul locale: ", defaultLocale);
+
   
   
   return (
@@ -16,9 +25,23 @@ export const ProfileCard = () => {
         <img src={profileImage} className="profile-card-image" alt="..." />
       </div>
       <div className="profile-card-text-container">
-        <h1 className="profile-card-title">Hello, I am Fer</h1>
+        <h1 className="profile-card-title">
+          {
+            [
+              locale === "en-US" && en.profileTitle,
+              locale === "es-PE" && es.profileTitle,
+              locale === "fr-CA" && fr.profileTitle
+            ]
+          }
+        </h1>
         <p className="profile-card-text">
-          Hello, I am Fer, I work as a frontend developer with over than 5 years of experience in web projects, currently I work with React and React Native. If you like my job please contact me in all social media like @ferparrios.
+        {
+            [
+              locale === "en-US" && en.profileDescription,
+              locale === "es-PE" && es.profileDescription,
+              locale === "fr-CA" && fr.profileDescription
+            ]
+          }
         </p>
       </div>
     </div>

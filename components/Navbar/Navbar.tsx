@@ -1,11 +1,21 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { en } from "../../i18n/en";
+import { es } from "../../i18n/es";
+import { fr } from "../../i18n/fr";
 
 export const Navbar = () => {
   const [dropdownActive, setDropdownActive] = useState(false);
   const [clickBlog, setClickMenu] = useState(false);
   const [clickPortfolio, setClickPortfolio] = useState(false);
   const [clickContact, setClickContact] = useState(false);
+
+  const { locale, locales, defaultLocale, route } = useRouter();
+  console.log("Locale: ", locale);
+  console.log("Available Locales: ", locales);
+  console.log("Defaul locale: ", defaultLocale);
+  console.log("Route: ", route)
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container ">
@@ -37,7 +47,11 @@ export const Navbar = () => {
                     setClickContact(false);
                   }}
                 >
-                  Blog
+                  {[
+                    locale === "es-PE" && es.blogMenu,
+                    locale === "en-US" && en.blogMenu,
+                    locale === "fr-CA" && fr.blogMenu,
+                  ]}
                 </a>
               </Link>
             </li>
@@ -51,7 +65,11 @@ export const Navbar = () => {
                     setClickContact(false);
                   }}
                 >
-                  Portfolio
+                  {[
+                    locale === "es-PE" && es.portfolioMenu,
+                    locale === "en-US" && en.portfolioMenu,
+                    locale === "fr-CA" && fr.portfolioMenu,
+                  ]}
                 </a>
               </Link>
             </li>
@@ -65,21 +83,29 @@ export const Navbar = () => {
                     setClickContact(true);
                   }}
                 >
-                  Contact
+                  {[
+                    locale === "es-PE" && es.contactMenu,
+                    locale === "en-US" && en.contactMenu,
+                    locale === "fr-CA" && fr.contactMenu,
+                  ]}
                 </a>
               </Link>
             </li>
             <li className="nav-item dropdown languaje-container">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                // href="#"
                 id="navbarDropdownMenuLink"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
                 onClick={() => setDropdownActive(!dropdownActive)}
               >
-                Languaje
+                {[
+                  locale === "es-PE" && es.languajeMenu,
+                  locale === "en-US" && en.languajeMenu,
+                  locale === "fr-CA" && fr.languajeMenu,
+                ]}
               </a>
               <ul
                 className={
@@ -88,19 +114,19 @@ export const Navbar = () => {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                  <a className="dropdown-item" href="#">
-                    EN
-                  </a>
+                  <Link href={'/'} locale={'en-US'} >
+                    <a className="dropdown-item">EN</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    SP
-                  </a>
+                  <Link href={'/'} locale={'es-PE'}>
+                    <a className="dropdown-item">ES</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    FR
-                  </a>
+                  <Link href={'/'} locale={'fr-CA'}>
+                    <a className="dropdown-item">FR</a>
+                  </Link>
                 </li>
               </ul>
             </li>
