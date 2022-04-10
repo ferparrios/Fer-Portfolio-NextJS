@@ -11,7 +11,7 @@ export const BlogHome = () => {
   const { locale } = useRouter()
 
   return (
-    <div className="blog-home-container" id="blog-home">
+    <div className="blog-home-container" /*id="blog-home"*/>
       <h1 className="blog-home-title">
         {[
           locale === "en-US" && en.blogHomeTitle,

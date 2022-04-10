@@ -1,6 +1,7 @@
 import { en } from "i18n/en";
 import { es } from "i18n/es";
 import { fr } from "i18n/fr";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React,  {useEffect} from "react";
 import { useProfileCard } from "./ProfileCardHooks";
@@ -43,6 +44,18 @@ export const ProfileCard = () => {
             ]
           }
         </p>
+      </div>
+
+      <div className="profile-card-button-container" >
+      <div className="profile-card-button">
+        
+          <Link href="#blog-home">
+          <p className="profile-card-text">
+            Check my content ->
+            </p>
+          </Link>
+        
+      </div>
       </div>
     </div>
   );

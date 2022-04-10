@@ -27,10 +27,12 @@ const Home: NextPage = () => {
     // <Layout>
     <>
       <ProfileCard />
-      <div className="blog-home-index-container">
+      <div className="blog-home-index-container" id="blog-home">
         <BlogHome />
       </div>
-      <PortfolioContainer />
+      <div className="portfolio-home-index-container" id="portfolio-home">
+        <PortfolioContainer />
+      </div>
       <div className="blog-home-index-container">
         <ContactContainer />
       </div>

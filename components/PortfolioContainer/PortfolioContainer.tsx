@@ -9,7 +9,7 @@ import { fr } from "i18n/fr";
 export const PortfolioContainer = () => {
   const { locale } = useRouter();
   return (
-    <div className="portfolio-home-container" id="portfolio-home">
+    <div className="portfolio-home-container" /*id="portfolio-home"*/>
       <h1 className="blog-home-title">
         {[
           locale === "en-US" && en.projectsTitle,
