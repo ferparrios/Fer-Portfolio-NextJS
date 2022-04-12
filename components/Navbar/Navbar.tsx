@@ -4,24 +4,24 @@ import React, { useState } from "react";
 import { en } from "../../i18n/en";
 import { es } from "../../i18n/es";
 import { fr } from "../../i18n/fr";
+import { ModalMenu } from "@components/ModalMenu/ModalMenu";
 
 export const Navbar = () => {
   const [dropdownActive, setDropdownActive] = useState(false);
   const [clickBlog, setClickMenu] = useState(false);
   const [clickPortfolio, setClickPortfolio] = useState(false);
   const [clickContact, setClickContact] = useState(false);
+  const [menuResponsive, setmenuResponsive] = useState(false)
 
   const { locale, locales, defaultLocale, route } = useRouter();
-  console.log("Locale: ", locale);
-  console.log("Available Locales: ", locales);
-  console.log("Defaul locale: ", defaultLocale);
-  console.log("Route: ", route)
+  
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container ">
+    <>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container ">
       <div className="container-fluid navbar-layout">
         <Link href="/">
-          <a className="navbar-brand">Fernando Paredes Rios</a>
+          <a className="navbar-brand navbar-name">Fernando Paredes Rios</a>
         </Link>
         <button
           className="navbar-toggler"
@@ -31,6 +31,7 @@ export const Navbar = () => {
           aria-controls="navbarNavDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setmenuResponsive(!menuResponsive)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -134,6 +135,15 @@ export const Navbar = () => {
         </div>
       </div>
     </nav>
+
+    {
+      menuResponsive && (
+        <ModalMenu />
+      )
+    }
+    
+    
+    </>
   );
 };
 

@@ -9,7 +9,6 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Swal from "sweetalert2";
-// import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   // Swal.fire({
@@ -24,7 +23,6 @@ const Home: NextPage = () => {
   // console.log("Available Locales: ", locales)
 
   return (
-    // <Layout>
     <>
       <ProfileCard />
       <div className="blog-home-index-container" id="blog-home">
@@ -33,11 +31,10 @@ const Home: NextPage = () => {
       <div className="portfolio-home-index-container" id="portfolio-home">
         <PortfolioContainer />
       </div>
-      <div className="blog-home-index-container">
+      <div className="contact-home-container">
         <ContactContainer />
       </div>
     </>
-    // </Layout>
   );
 };
 
