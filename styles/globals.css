@@ -665,3 +665,62 @@ a {
 .contact-label{
   color: white;
 }
+
+/* Skeleton */
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.skeleton-text {
+  width: 80%;
+  height: 30px;
+  animation: skeleton-loading 1s linear infinite alternate;
+  margin: 20px auto;
+}
+
+.skeleton-presentation-text{
+  width: 80%;
+  height: 5px;
+  animation: skeleton-loading 1s linear infinite alternate;
+  margin: 5px auto;
+}
+
+
+
+@media (min-width: 768px) {
+  .skeleton{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skeleton-profile-button{
+    width: 20%;
+    height: 70px;
+    animation: skeleton-loading 1s linear infinite alternate;
+    margin: 5px auto;
+  }
+}
+
+
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(163, 184, 194);
+  }
+
+  50%{
+    background-color: rgb(163, 184, 200);
+  }
+
+  100%{
+    background-color: rgb(229, 247, 255);
+  }
+}
