@@ -12,7 +12,7 @@ export const ContactForm = () => {
   const [emailResponse, setEmailResponse] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
     setEmailResponse(true);
     setLoadingEmail(true);
