@@ -18,13 +18,13 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark navbar-container ">
-      <div className="container-fluid navbar-layout">
+      {/* <nav classNameName="navbar">
+      <div classNameName="container-fluid navbar-layout">
         <Link href="/">
-          <a className="navbar-brand navbar-name">Fernando Paredes Rios</a>
+          <a classNameName="navbar-brand navbar-name">Fernando Paredes Rios</a>
         </Link>
         <button
-          className="navbar-toggler"
+          classNameName="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
@@ -33,14 +33,14 @@ export const Navbar = () => {
           aria-label="Toggle navigation"
           onClick={() => setmenuResponsive(!menuResponsive)}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span classNameName="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
+        <div classNameName="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul classNameName="navbar-nav">
+            <li classNameName="nav-item">
               <Link href="#blog-home">
                 <a
-                  className={clickBlog ? "nav-link active" : "nav-link"}
+                  classNameName={clickBlog ? "nav-link active" : "nav-link"}
                   aria-current="page"
                   onClick={() => {
                     setClickMenu(true);
@@ -56,10 +56,10 @@ export const Navbar = () => {
                 </a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li classNameName="nav-item">
               <Link href="#portfolio-home">
                 <a
-                  className={clickPortfolio ? "nav-link active" : "nav-link"}
+                  classNameName={clickPortfolio ? "nav-link active" : "nav-link"}
                   onClick={() => {
                     setClickMenu(false);
                     setClickPortfolio(true);
@@ -74,10 +74,10 @@ export const Navbar = () => {
                 </a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li classNameName="nav-item">
               <Link href="#contact-home">
                 <a
-                  className={clickContact ? "nav-link active" : "nav-link"}
+                  classNameName={clickContact ? "nav-link active" : "nav-link"}
                   onClick={() => {
                     setClickMenu(false);
                     setClickPortfolio(false);
@@ -92,9 +92,9 @@ export const Navbar = () => {
                 </a>
               </Link>
             </li>
-            <li className="nav-item dropdown languaje-container">
+            <li classNameName="nav-item dropdown languaje-container">
               <a
-                className="nav-link dropdown-toggle"
+                classNameName="nav-link dropdown-toggle"
                 // href="#"
                 id="navbarDropdownMenuLink"
                 role="button"
@@ -109,24 +109,24 @@ export const Navbar = () => {
                 ]}
               </a>
               <ul
-                className={
+                classNameName={
                   dropdownActive ? "dropdown-menu-show" : "dropdown-menu"
                 }
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
                   <Link href={'/'} locale={'en-US'} >
-                    <a className="dropdown-item">EN</a>
+                    <a classNameName="dropdown-item">EN</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={'/'} locale={'es-PE'}>
-                    <a className="dropdown-item">ES</a>
+                    <a classNameName="dropdown-item">ES</a>
                   </Link>
                 </li>
                 <li>
                   <Link href={'/'} locale={'fr-CA'}>
-                    <a className="dropdown-item">FR</a>
+                    <a classNameName="dropdown-item">FR</a>
                   </Link>
                 </li>
               </ul>
@@ -134,13 +134,101 @@ export const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> */}
 
-    {
+    {/* {
       menuResponsive && (
         <ModalMenu />
       )
-    }
+    } */}
+
+<nav className="navbar" role="navigation" aria-label="main navigation">
+  <div className="navbar-brand">
+    <a className="navbar-item" href="https://bulma.io">
+      <img src="images/fer-avatar.jpg" width="100%" height="100%" />
+    </a>
+
+    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" className="navbar-menu">
+    <div className="navbar-start">
+      <a className="navbar-item">
+        Fernando Paredes Rios
+      </a>
+
+      <a className="navbar-item">
+        About
+      </a>
+
+      <a className="navbar-item">
+        Portfolio
+      </a>
+
+      <a className="navbar-item">
+        Contacto
+      </a>
+
+      {/* <div className="navbar-item has-dropdown is-hoverable">
+        <a className="navbar-link">
+          Lenguaje
+        </a>
+
+        <div className="navbar-dropdown">
+          <a className="navbar-item">
+            EN
+          </a>
+          <a className="navbar-item">
+            ES
+          </a>
+          <a className="navbar-item">
+            FR
+          </a>
+          
+        </div>
+      </div> */}
+    </div>
+
+    <div className="navbar-item has-dropdown is-hoverable">
+        <a className="navbar-link">
+          Lenguaje
+        </a>
+
+        <div className="navbar-dropdown">
+          <a className="navbar-item">
+            EN
+          </a>
+          <a className="navbar-item">
+            ES
+          </a>
+          <a className="navbar-item">
+            FR
+          </a>
+          {/* <hr className="navbar-divider" />
+          <a className="navbar-item">
+            Report an issue
+          </a> */}
+        </div>
+      </div>
+
+    {/* <div className="navbar-end">
+      <div className="navbar-item">
+        <div className="buttons">
+          <a className="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a className="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div> */}
+  </div>
+</nav>
     
     
     </>

@@ -7,7 +7,7 @@ export const useProfileCard = () => {
     const profileFer = async () => {
       const res = await fetch('https://api.github.com/users/ferparrios')
       const data = await res.json()
-      console.log('Data Profile ', data.avatar_url)
+      // console.log('Data Profile ', data.avatar_url)
       setProfileImage(data.avatar_url)
     }
     profileFer()

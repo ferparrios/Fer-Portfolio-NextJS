@@ -1,4 +1,4 @@
-export  { ProjectsCard } from "./ProjectsCard/ProjectsCard";
+export { ProjectsCard } from "./ProjectsCard/ProjectsCard";
 export { Layout } from "./Layout/Layout";
 export { FooterNav } from "./FooterNav/FooterNav";
 export { ContactForm } from "./ContactForm/ContactForm";
@@ -9,10 +9,4 @@ export { PortfolioContainer } from "./PortfolioContainer/PortfolioContainer";
 export { BlogHome } from "./BlogHome/BlogHome";
 export { Navbar } from "./Navbar/Navbar";
 export { ProfileCard } from "./ProfileCard/ProfileCard";
-
-
-
-
-
-
-
+export { About } from "./About/About";
