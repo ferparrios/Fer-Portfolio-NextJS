@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeCard } from "@components/index";
+import { HomeCard, PortfolioGrid } from "@components/index";
 import { portfolioData } from "banners-data";
 import { useRouter } from "next/router";
 import { en } from "i18n/en";
@@ -19,29 +19,14 @@ export const PortfolioContainer = () => {
           Here a few past design projects I've worked on
         </h2>
         <div className="project-grid">
-          <div className="columns is-multiline is-mobile">
-            <div className="column is-12-mobile is-half-tablet is-one-third-desktop one-figure">
-              <figure className="image is-3by2">
-                <img
-                  src="images/bc_logo.webp"
-                  className="project-thumb"
-                  alt=""
-                />
-                <figcaption className="caption-box">
-                  <h1 className="title is-size-5 is-size-4-widescreen">
-                    High-end, custom residential renovaters serving Fraser
-                    Valley homeowners.
-                  </h1>
-                  <a
-                    href="#"
-                    className="button is-primary is-outlined isrounded"
-                  >
-                    <span>Visit website or repo</span>
-                  </a>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+        <div className="columns is-multiline is-mobile">
+          
+        {
+          portfolioData.map((item, index) => (
+            <PortfolioGrid title={item.title} image={item.image} link={item.productionLink} key={index}/>
+          ))
+        }
+        </div>
         </div>
       </div>
     </section>

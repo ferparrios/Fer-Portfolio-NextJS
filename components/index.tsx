@@ -10,3 +10,4 @@ export { BlogHome } from "./BlogHome/BlogHome";
 export { Navbar } from "./Navbar/Navbar";
 export { ProfileCard } from "./ProfileCard/ProfileCard";
 export { About } from "./About/About";
+export {PortfolioGrid} from "./PortfolioGrid/PortfolioGrid"
