@@ -6,6 +6,7 @@ import {
   ContactContainer,
   Layout,
   About,
+  SocialMediaBox,
 } from "@components/index";
 import { Skills } from "@components/Skills/Skills";
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -26,20 +27,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-    {/* <button className="button is-danger">Esto</button> */}
       <ProfileCard />
       <About />
       <Skills />
-
-      {/* <div className="blog-home-index-container" id="blog-home"> */}
-        {/* <BlogHome /> */}
-      {/* </div> */}
-      {/* <div className="portfolio-home-index-container" id="portfolio-home"> */}
-        <PortfolioContainer />
-      {/* </div> */}
-      {/* <div className="contact-home-container"> */}
-        {/* <ContactContainer /> */}
-      {/* </div> */}
+      <PortfolioContainer />
+      <ContactContainer />
+      <SocialMediaBox />
     </>
   );
 };

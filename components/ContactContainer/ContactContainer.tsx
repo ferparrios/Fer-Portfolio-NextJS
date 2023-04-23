@@ -12,68 +12,68 @@ export const ContactContainer = () => {
   const [mouseGithubOver, setmouseGithubOver] = useState(false);
 
   return (
-    <div id="contact-home" className="contact-home-index-container">
-      <h2 className="blog-home-title">Let me a message here:</h2>
-      <ContactForm />
+    // <div id="contact-home" className="contact-home-index-container is-mobile columns">
+    //   <h2 className="blog-home-title">Let me a message here:</h2>
+    //   <ContactForm />
 
-      <div className="footer-arrows-social-container">
-        <div className="footer-up-arrows">
-          <Link href="#" as={"/"}>
-            <Icon 
-              icon="charm:arrow-up" 
-              width={50} 
-              className="footer-social-up-arrow"
-            />
-          </Link>
-        </div>
+    //   <div className="footer-arrows-social-container">
+    //     <div className="footer-up-arrows">
+    //       <Link href="#" as={"/"}>
+    //         <Icon
+    //           icon="charm:arrow-up"
+    //           width={50}
+    //           className="footer-social-up-arrow"
+    //         />
+    //       </Link>
+    //     </div>
 
-        <div className="footer-social">
-          <div className="footer-social-item-container">
-            <Link href={"https://www.linkedin.com/in/fparedesr112/"}>
-              <a target={"_blank"}>
-              <Icon
-                icon="mdi:linkedin"
-                width={50}
-                className="footer-social-icon"
-              />
-              </a>
-            </Link>
+    //   </div>
+    // </div>
+    <div className="bottom-div">
+      <div className="container is-narrow">
+        <div className="box">
+          <div className="field">
+            <label className="label">Your Name</label>
+            <div className="control">
+              <input className="input" type="text" placeholder="Text input" />
+            </div>
           </div>
-          <div className="footer-social-item-container">
-            <Link href={"https://www.instagram.com/ferparrios/"}>
-              <a target={"_blank"}>
-                <Icon
-                  icon="akar-icons:instagram-fill"
-                  width={50}
-                  className="footer-social-icon"
-                />
-              </a>
-            </Link>
-          </div>
-          <div className="footer-social-item-container">
-            <Link href={"https://twitter.com/ferparrios"}>
-              <a target={"_blank"}>
-              <Icon
-                icon="akar-icons:twitter-fill"
-                width={50}
-                className="footer-social-icon"
+
+          <div className="field">
+            <label className="label">Your Email</label>
+            <div className="control has-icons-right">
+              <input
+                className="input is-danger"
+                type="email"
+                placeholder="Email input"
+                value=""
               />
-              </a>
-            </Link>
+              <span className="icon is-small is-left">
+                <i className="fas fa-envelope"></i>
+              </span>
+              <span className="icon is-small is-right">
+                <i className="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p className="help is-danger">This email is invalid</p>
           </div>
-          <div className="footer-social-item-container">
-            <Link href={"https://github.com/ferparrios"}>
-              <a target={"_blank"}>
-              <Icon
-                icon="akar-icons:github-fill"
-                width={50}
-                className="footer-social-icon"
-              />
-              </a>
-            </Link>
+
+          <div className="field">
+            <label className="label">Your Message</label>
+            <div className="control">
+              <textarea className="textarea" placeholder="Textarea"></textarea>
+            </div>
+          </div>
+
+          <div className="field is-grouped">
+            <div className="control">
+              <button className="button is-link">Send Message</button>
+            </div>
           </div>
         </div>
       </div>
+
+      
     </div>
   );
 };
