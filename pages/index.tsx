@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import {
   ProfileCard,
-  BlogHome,
   PortfolioContainer,
   ContactContainer,
   Layout,
+  About,
+  SocialMediaBox,
 } from "@components/index";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Skills } from "@components/Skills/Skills";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 const Home: NextPage = () => {
   // Swal.fire({
@@ -25,15 +27,11 @@ const Home: NextPage = () => {
   return (
     <>
       <ProfileCard />
-      <div className="blog-home-index-container" id="blog-home">
-        <BlogHome />
-      </div>
-      <div className="portfolio-home-index-container" id="portfolio-home">
-        <PortfolioContainer />
-      </div>
-      <div className="contact-home-container">
-        <ContactContainer />
-      </div>
+      <About />
+      <Skills />
+      <PortfolioContainer />
+      <ContactContainer />
+      <SocialMediaBox />
     </>
   );
 };

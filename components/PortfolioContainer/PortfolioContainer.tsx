@@ -1,34 +1,33 @@
 import React from "react";
-import { HomeCard } from "@components/index";
+import { PortfolioGrid } from "@components/index";
 import { portfolioData } from "banners-data";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { en } from "i18n/en";
-import { es } from "i18n/es";
-import { fr } from "i18n/fr";
 
 export const PortfolioContainer = () => {
-  const { locale } = useRouter();
+  // const { locale } = useRouter();
   return (
-    <div className="portfolio-home-container" /*id="portfolio-home"*/>
-      <h1 className="blog-home-title">
-        {[
-          locale === "en-US" && en.projectsTitle,
-          locale === "es-PE" && es.projectsTitle,
-          locale === "fr-CA" && fr.projectsTitle,
-        ]}
-      </h1>
-      <div className="blog-home-cards-container">
-        {portfolioData.map((i, index) => (
-          <HomeCard
-            title={i.title}
-            backgroundImage={i.backgroundImage}
-            referenceLink={i.referenceLink}
-            referenceImage={i.referenceImage}
-            link={i.link}
-            key={index}
-          />
-        ))}
+    <section className="section projects is-medium is-white has-text-centered">
+      <div className="container is-narrow">
+        <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">
+          {[en.recentWorkTitle]}
+        </h1>
+        <h2 className="subtitle is-size-5-desktop">
+          {[en.recentWorkSubtitle]}
+        </h2>
+        <div className="project-grid">
+          <div className="columns is-multiline is-mobile">
+            {portfolioData.map((item, index) => (
+              <PortfolioGrid
+                title={item.title}
+                image={item.image}
+                link={item.productionLink}
+                key={index}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
