@@ -2,6 +2,7 @@ import React from "react";
 import { PortfolioGrid } from "@components/index";
 import { portfolioData } from "banners-data";
 // import { useRouter } from "next/router";
+import { en } from "i18n/en";
 
 export const PortfolioContainer = () => {
   // const { locale } = useRouter();
@@ -9,10 +10,10 @@ export const PortfolioContainer = () => {
     <section className="section projects is-medium is-white has-text-centered">
       <div className="container is-narrow">
         <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">
-          My recent work
+          {[en.recentWorkTitle]}
         </h1>
         <h2 className="subtitle is-size-5-desktop">
-          Here a few past design projects I've worked on
+          {[en.recentWorkSubtitle]}
         </h2>
         <div className="project-grid">
           <div className="columns is-multiline is-mobile">

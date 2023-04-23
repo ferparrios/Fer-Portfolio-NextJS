@@ -1,5 +1,4 @@
 import React from "react";
-// import { FooterNav } from "@components/index";
 import Link from "next/link";
 
 export const FooterContainer = () => {

@@ -1,4 +1,5 @@
 import React from "react";
+import { en } from "i18n/en";
 
 export const ProfileCard = () => {
   return (
@@ -10,12 +11,9 @@ export const ProfileCard = () => {
       </div>
       <div className="hero-foot column is-three-fifths is-offset-one-fifth">
         <div className="box">
-          <p className="subtitle">Hi, my name is</p>
-          <h1 className="title">Fernando Paredes Rios.</h1>
-          <p>
-            I like to create amazing applications for the web and smartphones,
-            check some of my work here.
-          </p>
+          <p className="subtitle">{[en.sayHi]}</p>
+          <h1 className="title">{[en.name]}</h1>
+          <p>{[en.description]}</p>
         </div>
       </div>
     </section>

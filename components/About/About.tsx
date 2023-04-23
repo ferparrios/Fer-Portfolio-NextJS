@@ -1,4 +1,5 @@
 import React from "react";
+import { en } from "../../i18n/en";
 
 export const About = () => {
   return (
@@ -7,13 +8,7 @@ export const About = () => {
         <div className="columns is-centered">
           <div className="column is-three-fifths">
             <h2 className="subtitle is-size-5-desktop has-text-weight-normal">
-              I start my way on 2017 as Jr. developer building WordPress
-              websites and little webpages with JavaScript, HTML and CSS and
-              today I'm work with React Native building awesome mobile
-              applications for clients everywhere in the world, I'm very proud
-              of my work since the bases until the complex apps that I'm working
-              now, I'm very happy of what I'm doing and want to keep working on
-              this for so long time.
+              {[en.about]}
             </h2>
           </div>
         </div>

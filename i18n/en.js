@@ -1,4 +1,11 @@
 export const en = {
+  "sayHi": "Hi, my name is",
+  "name": "Fernando Paredes Rios.",
+  "description": "I like to create amazing applications for the web and smartphones, check some of my work here.",
+  "about": "I start my way on 2017 as Jr. developer building WordPress websites and little webpages with JavaScript, HTML and CSS and today I'm work with React Native building awesome mobile applications for clients everywhere in the world, I'm very proud of my work since the bases until the complex apps that I'm working now, I'm very happy of what I'm doing and want to keep working on this for so long time.",
+  "recentWorkTitle": "My recent work",
+  "recentWorkSubtitle": "Here a few past design projects I've worked on",
+  "visitProjectButton": "Visit Project",
   "languajeMenu": "Languaje",
   "blogMenu": "Blog",
   "portfolioMenu": "Portfolio",

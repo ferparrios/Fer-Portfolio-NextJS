@@ -1,4 +1,5 @@
 import React from "react";
+import { en } from "i18n/en";
 
 export interface PortfolioGridProps {
   image: string;
@@ -22,7 +23,7 @@ export const PortfolioGrid = ({
             <figcaption className="caption-box">
               <h1 className="title is-size-5 is-size-4-widescreen">{title}</h1>
               <a href={link} target="_blank" className="button is-primary is-outlined isrounded">
-                <span>Visit Project</span>
+                <span>{[en.visitProjectButton]}</span>
               </a>
             </figcaption>
           </figure>
