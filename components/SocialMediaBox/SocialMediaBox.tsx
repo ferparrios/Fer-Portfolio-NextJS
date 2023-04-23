@@ -7,8 +7,9 @@ export const SocialMediaBox = () => {
     <div className="container">
       <div className="columns box social-media-box ">
         <div className="column social-media-box">
-          <Link href={"https://www.linkedin.com/in/fparedesr112/"}>
-            <a target={"_blank"}>
+          <Link href={"https://www.linkedin.com/in/ferparrios/"}>
+            {/* Safe link to the own website *//* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a target="_blank" rel="noreferrer">
               <Icon
                 icon="mdi:linkedin"
                 width={50}
@@ -19,7 +20,8 @@ export const SocialMediaBox = () => {
         </div>
         <div className="column  social-media-box">
           <Link href={"https://www.instagram.com/ferparrios/"}>
-            <a target={"_blank"}>
+            {/* Safe link to the own website *//* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a target="_blank" rel="noreferrer">
               <Icon
                 icon="akar-icons:instagram-fill"
                 width={50}
@@ -30,7 +32,8 @@ export const SocialMediaBox = () => {
         </div>
         <div className="column  social-media-box">
           <Link href={"https://twitter.com/ferparrios"}>
-            <a target={"_blank"}>
+            {/* Safe link to the own website *//* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a target="_blank" rel="noreferrer">
               <Icon
                 icon="akar-icons:twitter-fill"
                 width={50}
@@ -41,7 +44,8 @@ export const SocialMediaBox = () => {
         </div>
         <div className="column  social-media-box">
           <Link href={"https://github.com/ferparrios"}>
-            <a target={"_blank"}>
+            {/* Safe link to the own website *//* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a target="_blank" rel="noreferrer">
               <Icon
                 icon="akar-icons:github-fill"
                 width={50}
