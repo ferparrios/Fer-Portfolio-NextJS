@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import {
   ProfileCard,
-  BlogHome,
   PortfolioContainer,
   ContactContainer,
   Layout,
