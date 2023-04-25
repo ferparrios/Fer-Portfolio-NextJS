@@ -7,7 +7,7 @@ import { en } from "i18n/en";
 export const PortfolioContainer = () => {
   // const { locale } = useRouter();
   return (
-    <section className="section projects is-medium is-white has-text-centered">
+    <section className="section projects is-medium is-white has-text-centered" id="portfolio">
       <div className="container is-narrow">
         <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">
           {[en.recentWorkTitle]}
