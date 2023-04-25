@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 // import { useRouter } from "next/router";
 
 export const Navbar = () => {
@@ -8,9 +9,11 @@ export const Navbar = () => {
     <>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="https://bulma.io">
-            <img src="images/fer-avatar.jpg" width="100%" height="100%" />
-          </a>
+          <Link href="#">
+            <a className="navbar-item">
+              <img src="images/fer-avatar.jpg" width="100%" height="100%" />
+            </a>
+          </Link>
 
           <a
             role="button"
@@ -27,11 +30,17 @@ export const Navbar = () => {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">Fernando Paredes Rios</a>
+            <Link href={"/"}>
+              <a className="navbar-item">Fernando Paredes Rios</a>
+            </Link>
 
-            <a className="navbar-item">About</a>
+            <Link href={"#about"}>
+              <a className="navbar-item">About</a>
+            </Link>
 
-            <a className="navbar-item">Portfolio</a>
+            <Link href={"#portfolio"}>
+              <a className="navbar-item">Portfolio</a>
+            </Link>
 
             <a className="navbar-item">Contacto</a>
 
