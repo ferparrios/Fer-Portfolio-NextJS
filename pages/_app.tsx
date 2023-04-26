@@ -9,10 +9,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script
+      id="first-script"
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-XQRL267RZ4"
       ></Script>
       <Script
+      id="second-script"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
