@@ -1,5 +1,4 @@
 export * from "./Layout/Layout";
-export * from "./ContactForm/ContactForm";
 export * from "./ContactContainer/ContactContainer";
 export * from "./FooterContainer/FooterContainer";
 export * from "./PortfolioContainer/PortfolioContainer";

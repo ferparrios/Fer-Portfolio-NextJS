@@ -1,54 +1,127 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { Icon } from "@iconify/react";
 
 export const ContactContainer = () => {
+  const [loadingEmail, setLoadingEmail] = useState(false);
+  const [emailResponse, setEmailResponse] = useState(false);
+  const [thankYouMessage, setThankYouMessage] = useState(false);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    setEmailResponse(true);
+    setLoadingEmail(true);
+    emailjs
+      .sendForm(
+        "service_972boay",
+        "template_grzz54i",
+        e.target,
+        "Ddv_q4Cnj9A0idnNG"
+      )
+      .then((res) => {
+        setTimeout(() => {
+          console.log(res);
+          setEmailResponse(false);
+          setLoadingEmail(false);
+          setThankYouMessage(true);
+        }, 3000);
+      })
+      .then(() => {
+        setTimeout(() => {
+          setThankYouMessage(false);
+        }, 5000);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <section className="section is-medium is-primary has-text-centered  bottom-div">
-      {/* <div className="bottom-div"> */}
-        <div className="container is-narrow">
-          <div className="box">
-            <div className="field">
-              <label className="label">Your Name</label>
-              <div className="control">
-                <input className="input" type="text" placeholder="Text input" />
+      {loadingEmail ? (
+        <div
+          // style={{
+          //   width: 500,
+          //   borderColor: "black",
+          //   height: 500,
+          //   borderWidth: 2,
+          //   justifyContent: "center",
+          //   alignItems: "center"
+          // }}
+          className="box has-text-centered is-narrow container"
+        >
+          <div className="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      ) : thankYouMessage ? (
+        <div className="thankyou-container">
+          <Icon icon="akar-icons:circle-check" color="white" width="100" />
+          <p className="thankyou-message">Thank You for your Message</p>
+        </div>
+      ) : (
+        <form className="contact-form-home-container" onSubmit={sendEmail}>
+          <div className="container is-narrow">
+            <div className="box">
+              <div className="field">
+                <label className="label">Your Name</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="text"
+                    id="exampleFormControlInput1"
+                    placeholder="Peter Parker"
+                    name="name"
+                    required={true}
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className="field">
-              <label className="label">Your Email</label>
-              <div className="control has-icons-right">
+              <div className="field">
+                <label className="label">Your Email</label>
+
                 <input
-                  className="input is-danger"
                   type="email"
-                  placeholder="Email input"
-                  value=""
+                  className="input"
+                  id="exampleFormControlInput1"
+                  placeholder="peter@spiderman.com"
+                  name="email"
+                  required={true}
                 />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  <i className="fas fa-exclamation-triangle"></i>
-                </span>
               </div>
-              <p className="help is-danger">This email is invalid</p>
-            </div>
 
-            <div className="field">
-              <label className="label">Your Message</label>
-              <div className="control">
-                <textarea
-                  className="textarea"
-                  placeholder="Textarea"
-                ></textarea>
+              <div className="field">
+                <label className="label">Your Message</label>
+                <div className="control">
+                  <textarea
+                    className="textarea"
+                    id="exampleFormControlTextarea1"
+                    rows={5}
+                    name="message"
+                    required={true}
+                  ></textarea>
+                </div>
               </div>
-            </div>
 
-            <div className="field is-grouped">
-              <div className="control">
-                <button className="button is-link">Send Message</button>
+              <div className="field is-grouped">
+                <div className="control">
+                  {/* <button className="button is-link">Send Message</button> */}
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    className="button is-link"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
+      )}
       {/* </div> */}
     </section>
   );
