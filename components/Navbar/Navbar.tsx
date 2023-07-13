@@ -10,7 +10,7 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className="navbar is-fixed-top top-navbar"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
