@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Icon } from "@iconify/react";
+import { useRouter } from "next/router";
+import { en } from "../../i18n/en";
+import { es } from "../../i18n/es";
+import { fr } from "../../i18n/fr";
 
 export const ContactContainer = () => {
   const [loadingEmail, setLoadingEmail] = useState(false);
   const [emailResponse, setEmailResponse] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState(false);
+
+  const { locale } = useRouter();
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -34,20 +40,23 @@ export const ContactContainer = () => {
       .catch((err) => console.log(err));
   };
 
+  const messageBox = () => {
+    if (locale == "es") {
+      return es.sendMessage;
+    } else if (locale == "fr") {
+      return fr.sendMessage;
+    } else {
+      return en.sendMessage;
+    }
+  };
+
   return (
-    <section className="section is-medium is-primary has-text-centered  bottom-div" id="contact">
+    <section
+      className="section is-medium is-primary has-text-centered  bottom-div"
+      id="contact"
+    >
       {loadingEmail ? (
-        <div
-          // style={{
-          //   width: 500,
-          //   borderColor: "black",
-          //   height: 500,
-          //   borderWidth: 2,
-          //   justifyContent: "center",
-          //   alignItems: "center"
-          // }}
-          className="box has-text-centered is-narrow container"
-        >
+        <div className="box has-text-centered is-narrow container">
           <div className="lds-roller">
             <div></div>
             <div></div>
@@ -62,14 +71,26 @@ export const ContactContainer = () => {
       ) : thankYouMessage ? (
         <div className="thankyou-container">
           <Icon icon="akar-icons:circle-check" color="white" width="100" />
-          <p className="thankyou-message">Thank You for your Message</p>
+          <p className="thankyou-message">
+            {[
+              locale === "es-PE" && es.graciasMensaje,
+              locale === "en-US" && en.thankYouMessage,
+              locale === "fr-CA" && fr.merciMessage,
+            ]}
+          </p>
         </div>
       ) : (
         <form className="contact-form-home-container" onSubmit={sendEmail}>
           <div className="container is-narrow">
             <div className="box">
               <div className="field">
-                <label className="label">Your Name</label>
+                <label className="label">
+                  {[
+                    locale === "es-PE" && es.contactInputOne,
+                    locale === "en-US" && en.contactInputOne,
+                    locale === "fr-CA" && fr.contactInputOne,
+                  ]}
+                </label>
                 <div className="control">
                   <input
                     className="input"
@@ -83,7 +104,13 @@ export const ContactContainer = () => {
               </div>
 
               <div className="field">
-                <label className="label">Your Email</label>
+                <label className="label">
+                  {[
+                    locale === "es-PE" && es.contactInputTwo,
+                    locale === "en-US" && en.contactInputTwo,
+                    locale === "fr-CA" && fr.contactInputTwo,
+                  ]}
+                </label>
 
                 <input
                   type="email"
@@ -96,7 +123,13 @@ export const ContactContainer = () => {
               </div>
 
               <div className="field">
-                <label className="label">Your Message</label>
+                <label className="label">
+                  {[
+                    locale === "es-PE" && es.contactInputThree,
+                    locale === "en-US" && en.contactInputThree,
+                    locale === "fr-CA" && fr.contactInputThree,
+                  ]}
+                </label>
                 <div className="control">
                   <textarea
                     className="textarea"
@@ -113,7 +146,7 @@ export const ContactContainer = () => {
                   {/* <button className="button is-link">Send Message</button> */}
                   <input
                     type="submit"
-                    value="Send Message"
+                    value={messageBox()}
                     className="button is-link"
                   />
                 </div>

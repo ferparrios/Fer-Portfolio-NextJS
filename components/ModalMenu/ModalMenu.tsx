@@ -105,7 +105,7 @@ export const ModalMenu = () => {
           >
             {[
               locale === "es-PE" && es.languajeMenu,
-              locale === "en-US" && en.languajeMenu,
+              locale === "en-US" && en.languageMenu,
               locale === "fr-CA" && fr.languajeMenu,
             ]}
             {/* <Icon icon="bxs:down-arrow" color="white" width="10" className='dropdown-arrow-down' /> */}
