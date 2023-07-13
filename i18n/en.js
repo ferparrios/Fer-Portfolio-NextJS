@@ -15,7 +15,7 @@ export const en = {
   "profileDescription": "Hello, I am Fer, I work as a frontend developer with over than 5 years of experience in web projects, currently I work with React and React Native. If you like my job please contact me in all social media like @ferparrios.",
   "projectsTitle": "Projects",
   "blogHomeTitle": "Check my Content",
-  "contactTitle": "Let me a message here:",
+  "contactTitle": "Start a conversation:",
   "contactInputOne": "Your Name",
   "contactInputTwo": "Your Email",
   "contactInputThree": "Your Message to me",

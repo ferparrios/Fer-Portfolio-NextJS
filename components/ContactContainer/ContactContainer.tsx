@@ -55,6 +55,13 @@ export const ContactContainer = () => {
       className="section is-medium is-primary has-text-centered  bottom-div"
       id="contact"
     >
+      <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">
+          {[
+            locale === "es-PE" && es.contactTitle,
+            locale === "en-US" && en.contactTitle,
+            locale === "fr-CA" && fr.contactTitle,
+          ]}
+        </h1>
       {loadingEmail ? (
         <div className="box has-text-centered is-narrow container">
           <div className="lds-roller">
