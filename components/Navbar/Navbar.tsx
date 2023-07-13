@@ -4,10 +4,24 @@ import Link from "next/link";
 
 export const Navbar = () => {
   // const { locale, locales, defaultLocale, route } = useRouter();
-
+  // const navbar = document.querySelector("#NavBar");
+  // let top = navbar?.offsetTop;
+  // function stickynavbar() {
+  //   if (window.scrollY >= top) {
+  //     navbar?.classList.add("sticky");
+  //   } else {
+  //     navbar?.classList.remove("sticky");
+  //   }
+  // }
+  // window.addEventListener("scroll", stickynavbar);
+  // console.log(window.screenY)
   return (
     <>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar is-fixed-top top-navbar"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <Link href="#">
             <a className="navbar-item">
@@ -31,7 +45,7 @@ export const Navbar = () => {
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
             <Link href={"/"}>
-              <a className="navbar-item">Fernando Paredes Rios</a>
+              <a className="navbar-item nav-item">Fernando Paredes Rios</a>
             </Link>
 
             <Link href={"#about"}>
@@ -42,7 +56,9 @@ export const Navbar = () => {
               <a className="navbar-item">Portfolio</a>
             </Link>
 
-            <a className="navbar-item">Contacto</a>
+            <Link href={"#contact"}>
+              <a className="navbar-item">Contact</a>
+            </Link>
 
             {/* <div className="navbar-item has-dropdown is-hoverable">
         <a className="navbar-link">

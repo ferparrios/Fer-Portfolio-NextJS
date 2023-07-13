@@ -35,7 +35,7 @@ export const ContactContainer = () => {
   };
 
   return (
-    <section className="section is-medium is-primary has-text-centered  bottom-div">
+    <section className="section is-medium is-primary has-text-centered  bottom-div" id="contact">
       {loadingEmail ? (
         <div
           // style={{
