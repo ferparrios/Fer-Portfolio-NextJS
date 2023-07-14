@@ -11,7 +11,7 @@ export const fr = {
   "recentProjectscta": "Voici quelques projets passés sur lesquels j'ai travaillé",
   "projectsTitle": "Projets",
   "blogHomeTitle": "Lit mon contenu",
-  "contactTitle": "Laissez moi un message ici:",
+  "contactTitle": "Commencer une conversation:",
   "contactInputOne": "Votre nom",
   "contactInputTwo": "Votre e-mail",
   "contactInputThree": "Ton message pour moi",

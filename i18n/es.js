@@ -12,7 +12,7 @@ export const es = {
   "recentProjectscta": "Aquí algunos proyectos anteriores en los que he trabajado",
   "projectsTitle": "Proyectos",
   "blogHomeTitle": "Mira mi Contenido",
-  "contactTitle": "Déjame un mensaje:",
+  "contactTitle": "Conversemos: ",
   "contactInputOne": "Tu Nombre",
   "contactInputTwo": "Tu Email",
   "contactInputThree": "Tu Mensaje",

@@ -10,14 +10,14 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className="navbar is-fixed-top top-navbar"
+        className="navbar is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
         <div className="navbar-brand">
           <Link href="#">
             <a className="navbar-item">
-              <img src="images/fer-avatar.jpg" width="100%" height="100%" />
+              <img src="images/fer-avatar.jpg" width="20px" height="100%" />
             </a>
           </Link>
 
@@ -109,10 +109,6 @@ export const Navbar = () => {
               <Link href={"/"} locale={"fr-CA"}>
                 <a className="dropdown-item">FR</a>
               </Link>
-              {/* <hr className="navbar-divider" />
-          <a className="navbar-item">
-            Report an issue
-          </a> */}
             </div>
           </div>
 

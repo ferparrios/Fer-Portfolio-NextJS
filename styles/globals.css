@@ -24,6 +24,7 @@ section {
 .section-primary {
   height: 85vh;
   justify-content: center !important;
+  margin-top: 3.5rem;
 }
 
 .is-primary {
@@ -309,14 +310,17 @@ a {
 }
 
 /* Nav */
-.top-navbar{
+/* .top-navbar{
   margin-bottom: .5rem!important;
-}
+} */
 
 nav .navbar-item {
   color: black;
   font-weight: 700;
 }
+/* .navbar {
+  margin-bottom: .5rem;
+} */
 
 .nav-item:hover {
   /* background-color: white!important;
