@@ -6,7 +6,11 @@ import { es } from "../../i18n/es";
 import { fr } from "../../i18n/fr";
 // import { Icon } from "@iconify/react";
 
-export const ModalMenu = () => {
+interface Props {
+  setShowMenu: (showMenu: boolean) => void;
+}
+
+export const ModalMenu = ({ setShowMenu }: Props) => {
   const [dropdownActive, setDropdownActive] = useState(false);
   const [clickBlog, setClickMenu] = useState(false);
   const [clickPortfolio, setClickPortfolio] = useState(false);
@@ -17,12 +21,11 @@ export const ModalMenu = () => {
 
   return (
     <div className="modal-menu-home">
-      {/* <div className="collapse navbar-collapse" id="navbarNavDropdown"> */}
       <ul className="navbar-responsive">
         <li className="navbar-responsive-item">
-          <Link href="#blog-home">
+          <Link href="#">
             <a
-              className={clickBlog ? "nav-link responsive-active" : "nav-link"}
+              className="navbar-item nav-item"
               aria-current="page"
               onClick={() => {
                 setClickMenu(true);
@@ -30,28 +33,45 @@ export const ModalMenu = () => {
                 setClickContact(false);
                 setClickLanguaje(false);
                 setDropdownActive(false);
+                setShowMenu(false);
               }}
             >
-              {[
-                locale === "es-PE" && es.blogMenu,
-                locale === "en-US" && en.blogMenu,
-                locale === "fr-CA" && fr.blogMenu,
-              ]}
+              {en.name}
             </a>
           </Link>
         </li>
         <li className="navbar-responsive-item">
-          <Link href="#portfolio-home">
+          <Link href={"#about"}>
             <a
-              className={
-                clickPortfolio ? "nav-link responsive-active" : "nav-link"
-              }
+              className="navbar-item"
               onClick={() => {
                 setClickMenu(false);
                 setClickPortfolio(true);
                 setClickContact(false);
                 setClickLanguaje(false);
                 setDropdownActive(false);
+                setShowMenu(false);
+              }}
+            >
+              {[
+                locale === "es-PE" && es.acerca,
+                locale === "en-US" && en.aboutMe,
+                locale === "fr-CA" && fr.sur,
+              ]}
+            </a>
+          </Link>
+        </li>
+        <li className="navbar-responsive-item">
+          <Link href={"#portfolio"}>
+            <a
+              className="navbar-item"
+              onClick={() => {
+                setClickMenu(false);
+                setClickPortfolio(false);
+                setClickContact(true);
+                setClickLanguaje(false);
+                setDropdownActive(false);
+                setShowMenu(false);
               }}
             >
               {[
@@ -62,18 +82,12 @@ export const ModalMenu = () => {
             </a>
           </Link>
         </li>
-        <li className="navbar-responsive-item">
-          <Link href="#contact-home">
+        <li>
+          <Link href={"#contact"}>
             <a
-              className={
-                clickContact ? "nav-link responsive-active" : "nav-link"
-              }
+              className="navbar-item"
               onClick={() => {
-                setClickMenu(false);
-                setClickPortfolio(false);
-                setClickContact(true);
-                setClickLanguaje(false);
-                setDropdownActive(false);
+                setShowMenu(false);
               }}
             >
               {[
@@ -86,11 +100,7 @@ export const ModalMenu = () => {
         </li>
         <li className="navbar-responsive-item dropdown">
           <a
-          className={
-            clickLanguaje ? "nav-link dropdown-toggle responsive-active" : "nav-link dropdown-toggle "
-          }
-            // className="nav-link dropdown-toggle responsive-active"
-            // href="#"
+            className="navbar-item"
             id="navbarDropdownMenuLink"
             role="button"
             data-bs-toggle="dropdown"
@@ -108,7 +118,6 @@ export const ModalMenu = () => {
               locale === "en-US" && en.languageMenu,
               locale === "fr-CA" && fr.languajeMenu,
             ]}
-            {/* <Icon icon="bxs:down-arrow" color="white" width="10" className='dropdown-arrow-down' /> */}
           </a>
           <ul
             className={
@@ -118,17 +127,38 @@ export const ModalMenu = () => {
           >
             <li>
               <Link href={"/"} locale={"en-US"}>
-                <a className="dropdown-item">EN</a>
+                <a
+                  className="dropdown-item"
+                  onClick={() => {
+                    setShowMenu(false);
+                  }}
+                >
+                  EN
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/"} locale={"es-PE"}>
-                <a className="dropdown-item">ES</a>
+                <a
+                  className="dropdown-item"
+                  onClick={() => {
+                    setShowMenu(false);
+                  }}
+                >
+                  ES
+                </a>
               </Link>
             </li>
             <li>
               <Link href={"/"} locale={"fr-CA"}>
-                <a className="dropdown-item">FR</a>
+                <a
+                  className="dropdown-item"
+                  onClick={() => {
+                    setShowMenu(false);
+                  }}
+                >
+                  FR
+                </a>
               </Link>
             </li>
           </ul>
