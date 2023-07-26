@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import {withRouter} from 'next/router'
 import { useRouter } from "next/router";
 import { en } from "../../i18n/en";
 import { es } from "../../i18n/es";
