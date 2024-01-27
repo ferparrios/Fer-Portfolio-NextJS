@@ -18,12 +18,20 @@
 
 export const portfolioData = [
   {
+    image: "images/bch-inverse.svg",
+    title: "Banco de Chile Mobile App",
+    githubLink: "https://github.com/ferparrios/React-News-Search",
+    productionLink: "https://apps.apple.com/cl/app/mi-banco-chile/id1516872542",
+    description: "Mobile App for Banco de Chile",
+    tecnologies: ["React Native", "Typescript"],
+  },
+  {
     image: "images/frontdoor-primary-logo-new.svg",
     title: "Frontdoor Mobile App",
     githubLink: "https://github.com/ferparrios/React-News-Search",
-    productionLink: "",
+    productionLink: "https://apps.apple.com/us/app/frontdoor/id6443921342",
     description: "Mobile App for Backcountry US",
-    tecnologies: ["React Nativa", "Typescript"],
+    tecnologies: ["React Native", "Typescript"],
   },
   {
     image: "images/bc_logo.webp",
@@ -32,7 +40,7 @@ export const portfolioData = [
     productionLink:
       "https://apps.apple.com/us/app/backcountry-outdoor-gear/id450920999",
     description: "Mobile App for Backcountry US",
-    tecnologies: ["React Nativa", "Typescript"],
+    tecnologies: ["React Native", "Typescript"],
   },
   {
     image: "images/educared-logo.png",
@@ -40,7 +48,7 @@ export const portfolioData = [
     githubLink: "https://github.com/ferparrios/React-News-Search",
     productionLink: "https://educared.fundaciontelefonica.com.pe/",
     description: "Educared's main site",
-    tecnologies: ["React Nativa", "Typescript"],
+    tecnologies: ["React Native", "Typescript"],
   },
   {
     image: "images/valos_logo.png",
@@ -48,25 +56,25 @@ export const portfolioData = [
     githubLink: "https://github.com/ferparrios/React-News-Search",
     productionLink: "https://www.valor.com.pe/",
     description: "Mobile App for Backcountry US",
-    tecnologies: ["React Nativa", "Typescript"],
+    tecnologies: ["React Native", "Typescript"],
   },
   {
     image: "images/title_villaplanet.png",
     title: "Villaplanet Landing Page",
     githubLink: "https://github.com/ferparrios/React-News-Search",
     productionLink:
-      "http://villaplanet.educared.fundaciontelefonica.com.pe/#/login",
+      "https://educared.fundaciontelefonica.com.pe/villaplanet/",
     description: "Mobile App for Backcountry US",
-    tecnologies: ["React Nativa", "Typescript"],
+    tecnologies: ["React Native", "Typescript"],
   },
-  {
-    image: "images/animalia_logo.png",
-    title: "Animalia Pet Store",
-    githubLink: "https://github.com/ferparrios/React-News-Search",
-    productionLink: "https://animalia.com.pe/",
-    description: "Animalia Pet Store ecommerce",
-    tecnologies: ["React Nativa", "Typescript"],
-  },
+  // {
+  //   image: "images/animalia_logo.png",
+  //   title: "Animalia Pet Store",
+  //   githubLink: "https://github.com/ferparrios/React-News-Search",
+  //   productionLink: "https://animalia.com.pe/",
+  //   description: "Animalia Pet Store ecommerce",
+  //   tecnologies: ["React Native", "Typescript"],
+  // },
 ];
 
 // export const webDevData = [

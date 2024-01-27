@@ -77,7 +77,7 @@ export const Navbar = () => {
           </div>
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">
+            <a className="navbar-link navbar-item">
               {[
                 locale === "es-PE" && es.languajeMenu,
                 locale === "en-US" && en.languageMenu,
@@ -85,15 +85,15 @@ export const Navbar = () => {
               ]}
             </a>
 
-            <div className="navbar-dropdown">
+            <div className="navbar-dropdown ">
               <Link href={"/"} locale={"en-US"}>
-                <a className="dropdown-item">EN</a>
+                <a className="dropdown-item navbar-item">EN</a>
               </Link>
               <Link href={"/"} locale={"es-PE"}>
-                <a className="dropdown-item">ES</a>
+                <a className="dropdown-item navbar-item">ES</a>
               </Link>
               <Link href={"/"} locale={"fr-CA"}>
-                <a className="dropdown-item">FR</a>
+                <a className="dropdown-item navbar-item">FR</a>
               </Link>
             </div>
           </div>

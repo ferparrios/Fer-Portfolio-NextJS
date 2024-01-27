@@ -22,7 +22,7 @@ export const PortfolioGrid = ({
             <img src={image} className="project-thumb" alt={title} />
             <figcaption className="caption-box">
               <h1 className="title is-size-5 is-size-4-widescreen">{title}</h1>
-              <a href={link} target="_blank" rel="noreferrer" className="button is-primary is-outlined isrounded">
+              <a href={link} target="_blank" rel="noreferrer" className="button is-primary is-outlined isrounded button-primary-colored">
                 <span>{[en.visitProjectButton]}</span>
               </a>
             </figcaption>
