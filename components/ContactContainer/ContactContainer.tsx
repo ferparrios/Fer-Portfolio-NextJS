@@ -55,13 +55,13 @@ export const ContactContainer = () => {
       className="section is-medium is-primary has-text-centered  bottom-div"
       id="contact"
     >
-      <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">
-          {[
-            locale === "es-PE" && es.contactTitle,
-            locale === "en-US" && en.contactTitle,
-            locale === "fr-CA" && fr.contactTitle,
-          ]}
-        </h1>
+      <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile contact-container-title">
+        {[
+          locale === "es-PE" && es.contactTitle,
+          locale === "en-US" && en.contactTitle,
+          locale === "fr-CA" && fr.contactTitle,
+        ]}
+      </h1>
       {loadingEmail ? (
         <div className="box has-text-centered is-narrow container">
           <div className="lds-roller">
@@ -149,12 +149,12 @@ export const ContactContainer = () => {
               </div>
 
               <div className="field is-grouped">
-                <div className="control">
+                <div className="control ">
                   {/* <button className="button is-link">Send Message</button> */}
                   <input
                     type="submit"
                     value={messageBox()}
-                    className="button is-link"
+                    className="button is-link submit-button"
                   />
                 </div>
               </div>
