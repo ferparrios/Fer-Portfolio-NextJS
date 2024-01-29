@@ -416,6 +416,11 @@ input:focus {
   border: 2px solid #8060f6!important;
 }
 
+.thankyou-message {
+  color: #ffffff;
+  font-weight: bold;
+}
+
 /* Skill */
 
 .button-primary-colored {

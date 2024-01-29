@@ -19,7 +19,7 @@ export const ContactContainer = () => {
     setLoadingEmail(true);
     emailjs
       .sendForm(
-        "service_972boay",
+        "service_y08af5p",
         "template_grzz54i",
         e.target,
         "Ddv_q4Cnj9A0idnNG"
