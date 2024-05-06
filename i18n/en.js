@@ -1,6 +1,6 @@
 export const en = {
   "sayHi": "Hi, my name is",
-  "name": "Fer Paredes Rios",
+  "name": "Fernando Paredes\n Rios",
   "aboutMe": "About Me",
   "portfolioMenu": "Portfolio",
   "contactMenu": "Contact",

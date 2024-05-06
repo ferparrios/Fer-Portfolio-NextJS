@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
 
 * {
@@ -386,7 +390,7 @@ nav .navbar-item {
 /* About */
 
 h2 {
-  color: #ffffff!important;
+  color: #ffffff !important;
 }
 
 /* Contact Container */
@@ -396,10 +400,10 @@ h2 {
 }
 
 .submit-button {
-  background-color: #ffffff!important;
+  background-color: #ffffff !important;
   color: #8060f6 !important;
-  font-weight: bold!important;
-  border: 2px solid #8060f6!important;
+  font-weight: bold !important;
+  border: 2px solid #8060f6 !important;
 }
 
 .submit-button:hover {
@@ -409,11 +413,11 @@ h2 {
 }
 
 textarea:focus {
-  border: 2px solid #8060f6!important;
+  border: 2px solid #8060f6 !important;
 }
 
 input:focus {
-  border: 2px solid #8060f6!important;
+  border: 2px solid #8060f6 !important;
 }
 
 /* Skill */
@@ -432,10 +436,10 @@ input:focus {
 /* Footer */
 
 .social-media-box a {
-  color: #8060f6!important;
+  color: #8060f6 !important;
 }
 
 .footer-container a {
-  color: #8060f6!important;
-  font-weight: bold!important;
+  color: #8060f6 !important;
+  font-weight: bold !important;
 }

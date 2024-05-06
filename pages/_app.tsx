@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { Layout } from "@components/index";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import Script from "next/script";
-import "bulma/css/bulma.min.css";
+// import "bulma/css/bulma.min.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
