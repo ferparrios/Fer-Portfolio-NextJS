@@ -26,11 +26,11 @@ const Home: NextPage = () => {
   return (
     <>
       <ProfileCard />
-      <About />
+      {/* <About /> */}
       <Skills />
-      <PortfolioContainer />
-      <ContactContainer />
-      <SocialMediaBox />
+      {/* <PortfolioContainer /> */}
+      {/* <ContactContainer /> */}
+      {/* <SocialMediaBox /> */}
     </>
   );
 };

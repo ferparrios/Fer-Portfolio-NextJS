@@ -1,7 +1,7 @@
 export const es = {
   "languajeMenu": "Lenguaje",
   "acerca": "Acera de mi",
-  "blogMenu": "Blog",
+  "blog": "Blog",
   "portfolioMenu": "Portafolio",
   "contactMenu": "Contacto",
   "profileTitle": "Hola, soy",

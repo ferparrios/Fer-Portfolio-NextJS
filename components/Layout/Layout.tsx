@@ -8,7 +8,7 @@ export interface LayoutProps {
 
 export const Layout = (props: LayoutProps) => {
   return (
-    <div className='layout-container'>
+    <div className='max-w-screen-2xl mx-auto'>
       <Navbar />
       {props.children}
       <FooterContainer />

@@ -16,9 +16,9 @@ export const Navbar = () => {
     {
       route: "#about",
       loc: [
-        locale === "es-PE" && es.acerca,
-        locale === "en-US" && en.aboutMe,
-        locale === "fr-CA" && fr.sur,
+        locale === "es-PE" && es.blog,
+        locale === "en-US" && en.blogMenu,
+        locale === "fr-CA" && fr.blogMenu,
       ],
     },
     {
@@ -39,16 +39,16 @@ export const Navbar = () => {
     },
   ];
   return (
-    <nav className="fixed top-0 w-full bg-white">
-      <div className="flex items-center justify-between px-2 py-2">
-        <div className="flex items-center">
+    <nav className="fixed top-0 w-full bg-white ">
+      <div className="flex items-center justify-between px-2 py-2 max-w-screen-2xl">
+        <div className="flex items-center space-x-4">
           <Link href="/">
             <a className="navbar-item">
               <img src="images/fer-avatar.jpg" width="50px" height="100%" />
             </a>
           </Link>
           <Link href={"/"}>
-            <a className="hover:underline text-black font-semibold">
+            <a className="hover:underline text-black font-semibold text-xl pr-4">
               {/* {[en.name]} */}
               Fernando <br />
               Paredes Rios
@@ -56,11 +56,11 @@ export const Navbar = () => {
           </Link>
           <div
             id="navbarBasicExample"
-            className="hidden space-x-4 px-4 lg:block"
+            className="hidden space-x-16 px-4 lg:block"
           >
             {localeOptions.map((loc) => (
               <Link href={loc.route}>
-                <a className="hover:underline text-black font-semibold">
+                <a className="hover:underline text-black font-semibold text-xl">
                   {loc.loc}
                 </a>
               </Link>
