@@ -26,9 +26,18 @@ const Home: NextPage = () => {
   return (
     <>
       <ProfileCard />
-      {/* <About /> */}
+      <div className="px-12">
+        <h2 className="text-xl md:text-3xl font-bold">
+          Services that you can find with me:
+        </h2>
+      </div>
       <Skills />
-      {/* <PortfolioContainer /> */}
+      <div className="px-12">
+      <h2 className="text-xl md:text-3xl font-bold">
+        My Work: Highlighted Software development projects
+      </h2>
+      </div>
+      <PortfolioContainer />
       {/* <ContactContainer /> */}
       {/* <SocialMediaBox /> */}
     </>

@@ -44,11 +44,11 @@ export const Navbar = () => {
         <div className="flex items-center space-x-4">
           <Link href="/">
             <a className="navbar-item">
-              <img src="images/fer-avatar.jpg" width="50px" height="100%" />
+              <img src="images/fer-avatar.jpg" width="70px" height="100%" />
             </a>
           </Link>
           <Link href={"/"}>
-            <a className="hover:underline text-black font-semibold text-xl pr-4">
+            <a className="hover:underline text-black font-semibold  text-xl md:text-2xl pr-4">
               {/* {[en.name]} */}
               Fernando <br />
               Paredes Rios
@@ -56,11 +56,11 @@ export const Navbar = () => {
           </Link>
           <div
             id="navbarBasicExample"
-            className="hidden space-x-16 px-4 lg:block"
+            className="hidden space-x-16 px-6 lg:block"
           >
             {localeOptions.map((loc) => (
               <Link href={loc.route}>
-                <a className="hover:underline text-black font-semibold text-xl">
+                <a className="hover:underline text-black font-normal text-xl">
                   {loc.loc}
                 </a>
               </Link>

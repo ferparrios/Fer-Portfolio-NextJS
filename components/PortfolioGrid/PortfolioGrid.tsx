@@ -1,11 +1,15 @@
 import React from "react";
 import { en } from "i18n/en";
+import { Icon } from "@iconify/react";
 
 export interface PortfolioGridProps {
   image: string;
   title: string;
   description?: string;
-  link: string;
+  link?: string;
+  tecs: string[];
+  androidLink?: string;
+  iosLink?: string;
 }
 
 export const PortfolioGrid = ({
@@ -13,22 +17,58 @@ export const PortfolioGrid = ({
   title,
   description,
   link,
+  tecs,
+  androidLink,
+  iosLink,
 }: PortfolioGridProps) => {
-  return (
-    
-      
-        <div className="column is-12-mobile is-half-tablet is-one-third-desktop">
-          <figure className="image is-3by2">
-            <img src={image} className="project-thumb" alt={title} />
-            <figcaption className="caption-box">
-              <h1 className="title is-size-5 is-size-4-widescreen">{title}</h1>
-              <a href={link} target="_blank" rel="noreferrer" className="button is-primary is-outlined isrounded button-primary-colored">
-                <span>{[en.visitProjectButton]}</span>
-              </a>
-            </figcaption>
-          </figure>
+  const getLinkIcon = () => {
+    if (androidLink || iosLink) {
+      return (
+        <div className="flex space-x-2">
+          {androidLink !== "" && (
+            <a href={androidLink} target="_blank">
+              <Icon icon="bi:android" color="black" width="40" />
+            </a>
+          )}
+          {iosLink !== "" && (
+            <a href={iosLink} target="_blank">
+              <Icon icon="uil:apple" color="black" width="40" />
+            </a>
+          )}
         </div>
-      
-    
+      );
+    } else if (link) {
+      return (
+        <>
+          {link !== "" && (
+            <a href={link} target="_blank">
+              <Icon icon="mdi:web" color="black" width="40" />
+            </a>
+          )}
+        </>
+      );
+    } else {
+      return null;
+    }
+  };
+  return (
+    <div className="px-10 w-10/12 my-4 mx-auto border-2 rounded-3xl shadow max-w-3xl py-8 hover:bg-gray-200">
+      <div className="flex space-x-4 items-center md:justify-center md:px-2">
+        <img src={image} className="w-1/3 md:w-1/4 rounded-lg" alt={title} />
+        <h1 className="font-semibold">{title}</h1>
+      </div>
+      <p className="py-4 md:px-2 md:h-80">{description}</p>
+      <div className="md:h-32">
+        {tecs.map((tec) => (
+          <div className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer">
+            <p>{tec}</p>
+          </div>
+        ))}
+      </div>
+      <div className="flex items-center justify-between cursor-pointer py-4 md:py-0 md:px-8">
+        {androidLink || link || iosLink ? <h3 className="text-sm md:text-base">Check the project on:</h3> : null}
+        {getLinkIcon()}
+      </div>
+    </div>
   );
 };

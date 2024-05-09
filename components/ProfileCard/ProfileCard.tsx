@@ -8,8 +8,8 @@ import { fr } from "../../i18n/fr";
 export const ProfileCard = () => {
   const { locale } = useRouter();
   return (
-    <section className="p-12 md:p-32 mt-24 mx-auto block md:flex md:justify-center md:items-center">
-      <div className="md:w-1/2 space-y-8">
+    <section className="p-12 md:p-44 mt-24 mx-auto block md:flex md:justify-center md:items-center">
+      <div className="md:w-2/3 space-y-8 md:pl-14 ">
         <h1 className="text-4xl text-black font-bold">
           Fullstack Developer, problem solver
         </h1>
@@ -40,7 +40,7 @@ export const ProfileCard = () => {
           </p> */}
       </div>
 
-      <div className="md:w-1/2 md:flex md:justify-center md:items-center">
+      <div className="md:w-1/3 md:flex md:justify-center md:items-center">
         <img className="" src="images/fer-avatar-png.png" alt="img-avatar" />
       </div>
     </section>

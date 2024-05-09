@@ -135,9 +135,9 @@ section {
   background-color: black;
 }
 
-.caption-box h1 {
+/* .caption-box h1 {
   color: white;
-}
+} */
 
 /* bottom div */
 
@@ -209,10 +209,6 @@ section {
     justify-content: center !important;
     align-items: center !important;
   }
-}
-
-h1 {
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif !important; */
 }
 
 a {

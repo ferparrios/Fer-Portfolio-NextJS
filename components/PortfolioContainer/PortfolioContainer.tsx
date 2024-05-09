@@ -10,10 +10,10 @@ export const PortfolioContainer = () => {
   const { locale } = useRouter();
   return (
     <section
-      className="section projects is-medium is-white has-text-centered"
+      className="grid grid-cols-1 md:grid-cols-3 md:my-20"
       id="portfolio"
     >
-      <div className="container is-narrow">
+      {/* <div className="container is-narrow">
         <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile">
           {[
             locale === "es-PE" && es.recentProjectsTitle,
@@ -30,17 +30,22 @@ export const PortfolioContainer = () => {
         </h2>
         <div className="project-grid">
           <div className="columns is-multiline is-mobile">
-            {portfolioData.map((item, index) => (
+            
+          </div>
+        </div>
+      </div> */}
+      {portfolioData.map((item, index) => (
               <PortfolioGrid
                 title={item.title}
                 image={item.image}
                 link={item.productionLink}
+                androidLink = {item.androidLink}
+                iosLink = {item.iosLink}
                 key={index}
+                description={item.description}
+                tecs={item.tecnologies}
               />
             ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
