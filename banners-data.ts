@@ -37,6 +37,44 @@ export const portfolioData = [
     ],
   },
   {
+    image: "images/backcountry-logo.png",
+    title: "Backcountry",
+    githubLink: "https://github.com/ferparrios/React-News-Search",
+    androidLink:
+      "https://play.google.com/store/apps/details?id=com.backcountry.app&hl=en_US",
+    iosLink: "https://apps.apple.com/us/app/backcountry-outdoor-gear/id450920999",
+    description:
+      "Worked as a part of the development team for building the Backcountry Mobile application, and implemented new features, screens, and functionalities for the final product, created the interfaces for the different screens, created the logic for the searches inside the app, worked on the app's responsiveness with different devices including tablets and iPads, built different components for use inside the app, and worked with the client API, consuming all his data, and rendering it on different screens.",
+    tecnologies: [
+      "React Native",
+      "Typescript",
+      "Mobx",
+      "iOS",
+      "Android",
+      "Jest",
+      "React Testing Library",
+      "X-Code",
+    ],
+  },
+  {
+    image: "images/banco-de-chile-logo.png",
+    title: "Banco de Chile",
+    githubLink: "https://github.com/ferparrios/React-News-Search",
+    androidLink: "https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL",
+    iosLink: "https://apps.apple.com/cl/app/mi-banco-chile/id1516872542",
+    description:
+      "Built new features for Banco de Chile's current mobile app with React Native, building different types of components for the mobile app, implementing different types of Unit Tests for the React Native App with Jest and React Testing Library, adding new features to the different modules inside the app, and creating new components based on Figma designs and implementing them as Pixel Perfect Components.",
+    tecnologies: [
+      "React Native",
+      "Typescript",
+      "Redux",
+      "iOS",
+      "Android",
+      "Jest",
+      "React Testing Library",
+    ],
+  },
+  {
     image: "images/vizi_icon.png",
     title: "Vizi Biker",
     githubLink: "https://github.com/ferparrios/React-News-Search",
@@ -90,24 +128,7 @@ export const portfolioData = [
       "Git",
     ],
   },
-  {
-    image: "images/banco-de-chile-logo.png",
-    title: "Banco de Chile",
-    githubLink: "https://github.com/ferparrios/React-News-Search",
-    androidLink: "https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL",
-    iosLink: "https://apps.apple.com/cl/app/mi-banco-chile/id1516872542",
-    description:
-      "Built new features for Banco de Chile's current mobile app with React Native, building different types of components for the mobile app, implementing different types of Unit Tests for the React Native App with Jest and React Testing Library, adding new features to the different modules inside the app, and creating new components based on Figma designs and implementing them as Pixel Perfect Components.",
-    tecnologies: [
-      "React Native",
-      "Typescript",
-      "Redux",
-      "iOS",
-      "Android",
-      "Jest",
-      "React Testing Library",
-    ],
-  },
+  
   {
     image: "images/frontdoor-logo.png",
     title: "Frontdoor",
@@ -172,26 +193,6 @@ export const portfolioData = [
     ],
   },
   {
-    image: "images/backcountry-logo.png",
-    title: "Backcountry",
-    githubLink: "https://github.com/ferparrios/React-News-Search",
-    androidLink:
-      "https://play.google.com/store/apps/details?id=com.backcountry.app&hl=en_US",
-    iosLink: "https://apps.apple.com/us/app/backcountry-outdoor-gear/id450920999",
-    description:
-      "Worked as a part of the development team for building the Backcountry Mobile application, and implemented new features, screens, and functionalities for the final product, created the interfaces for the different screens, created the logic for the searches inside the app, worked on the app's responsiveness with different devices including tablets and iPads, built different components for use inside the app, and worked with the client API, consuming all his data, and rendering it on different screens.",
-    tecnologies: [
-      "React Native",
-      "Typescript",
-      "Mobx",
-      "iOS",
-      "Android",
-      "Jest",
-      "React Testing Library",
-      "X-Code",
-    ],
-  },
-  {
     image: "images/educared-logo.png",
     title: "Educared | Fundación Telefónica",
     githubLink: "https://github.com/ferparrios/React-News-Search",
@@ -233,168 +234,23 @@ export const portfolioData = [
       "Laravel",
     ],
   },
-  // {
-  //   image: "images/animalia_logo.png",
-  //   title: "Animalia Pet Store",
-  //   githubLink: "https://github.com/ferparrios/React-News-Search",
-  //   productionLink: "https://animalia.com.pe/",
-  //   description: "Animalia Pet Store ecommerce",
-  //   tecnologies: ["React Native", "Typescript"],
-  // },
 ];
 
-// export const webDevData = [
-//   {
-//     image: "images/web-projects/project14.png",
-//     title: "News Searcher",
-//     githubLink: "https://github.com/ferparrios/React-News-Search",
-//     productionLink: "https://react-news-search.vercel.app/",
-//     description: "A site to check the last news online",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project13.png",
-//     title: "Car Insurance Quote",
-//     githubLink: "https://github.com/ferparrios/React-Cotization-Tool",
-//     productionLink: "https://eager-cori-900928.netlify.app/",
-//     description: "A site generate a cotization for a Insurance for cars",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project12.jpeg",
-//     title: "Breaking Bad Phrases Site",
-//     githubLink: "https://github.com/ferparrios/React-Breaking-Bad-Quote",
-//     productionLink: "https://wonderful-pike-2a69bb.netlify.app/",
-//     description: "A site to obtain a phrase of Braking Bad",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project11.png",
-//     title: "React Wheater App",
-//     githubLink: "https://github.com/ferparrios/React-Weather-App",
-//     productionLink: "https://jolly-chandrasekhar-d2228f.netlify.app/",
-//     description: "A site for check the weather of your city",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project10.png",
-//     title: "Cryto Cotization Site",
-//     githubLink: "https://github.com/ferparrios/React-Crypto-Quote",
-//     productionLink: "https://pedantic-mirzakhani-ff9568.netlify.app/",
-//     description: "A site to check the value of Crypto currency wit the money of your country",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project9.png",
-//     title: "Vet's Date Appointment",
-//     githubLink: "https://github.com/ferparrios/React-Appointment-Management",
-//     productionLink: "https://determined-banach-c646cf.netlify.app/",
-//     description: "A site for create a dat with the vet",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project8.png",
-//     title: "Image Searcher",
-//     githubLink: "https://github.com/ferparrios/React-Image-Searcher",
-//     productionLink: "https://awesome-euler-02ab04.netlify.app/",
-//     description: "A site for finding images",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project7.png",
-//     title: "Lyrics Searcher",
-//     githubLink: "https://github.com/ferparrios/React-Lyrucs-Searcher",
-//     productionLink: "https://pensive-hawking-37060d.netlify.app/",
-//     description: "A site for find tje lyrics of your favorites songs",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project6.png",
-//     title: "Drink Receip Searcher",
-//     githubLink: "https://github.com/ferparrios/React-Drinks-Searcher",
-//     productionLink: "https://affectionate-lewin-131537.netlify.app/",
-//     description: "A searcher for receips of drinks",
-//     tecnologies: [
-//       "React", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project3.png",
-//     title: "Veterinaria Animalia",
-//     githubLink: "",
-//     productionLink: "https://animalia.com.pe/",
-//     description: "Ecommerce de la Veterinaria animalia",
-//     tecnologies: [
-//       "WordPress", "PHP", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project4.png",
-//     title: "Agencia Valor",
-//     githubLink: "",
-//     productionLink: "valor.com.pe",
-//     description: "Website de la Agencia Valor",
-//     tecnologies: [
-//       "WordPress", "PHP", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project5.png",
-//     title: "Educared - Villaplanet Landing Page",
-//     githubLink: "",
-//     productionLink: "https://educared.fundaciontelefonica.com.pe/villaplanet/",
-//     description: "Landing page para Villaplanet, proyecto de Educared",
-//     tecnologies: [
-//       "WordPress", "PHP", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project2.png",
-//     title: "Educared, Fundación Telefónica",
-//     githubLink: "",
-//     productionLink: "https://educared.fundaciontelefonica.com.pe/",
-//     description: "Educared, proyecto de fundación Telefónica",
-//     tecnologies: [
-//       "WordPress", "PHP", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-//   {
-//     image: "images/web-projects/project1.png",
-//     title: "Dimensoft",
-//     githubLink: "",
-//     productionLink: "https://dimensoft.pe",
-//     description: "Dimensoft Old version made with WordPress",
-//     tecnologies: [
-//       "WordPress", "PHP", "JavaScript", "HTML", "CSS"
-//     ]
-//   },
-// ]
+export const openSourceProjectsData = [
+  {
+    image: "images/npm-package-image.png",
+    title: "Xexe-Cli",
+    githubLink: "https://github.com/ferparrios/React-News-Search",
+    productionLink: "https://www.npmjs.com/package/xexe-cli",
+    description:
+      "A package for creating a quick React Native app on your device, includes some packages as React Navigation, Axios and a organization for all your components, you can choose if you want to install one of the package or not",
+    tecnologies: [
+      "Javascript",
+      "Node",
+      "Git",
+      "Npm publish"
+    ],
+  },
+]
 
-// export const mobileProjectsData = [
-//   {
-//     image: "images/mobile-projects/m-project1.png",
-//     title: "Backcountry App",
-//     githubLink: "",
-//     productionLink: "https://apps.apple.com/us/app/backcountry-outdoor-gear/id450920999",
-//     description: "Backcountry Mobile App",
-//     tecnologies: [
-//       "React Native", "Typescript", "Mobx", "Android", "iOS"
-//     ]
-//   }
-// ]
+

@@ -1,168 +1,144 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Icon } from "@iconify/react";
-import { useRouter } from "next/router";
-import { en } from "../../i18n/en";
-import { es } from "../../i18n/es";
-import { fr } from "../../i18n/fr";
+import axios from "axios";
 
 export const ContactContainer = () => {
-  const [loadingEmail, setLoadingEmail] = useState(false);
-  const [emailResponse, setEmailResponse] = useState(false);
-  const [thankYouMessage, setThankYouMessage] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
 
-  const { locale } = useRouter();
-
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    setEmailResponse(true);
-    setLoadingEmail(true);
-    emailjs
-      .sendForm(
-        "service_972boay",
-        "template_grzz54i",
-        e.target,
-        "Ddv_q4Cnj9A0idnNG"
-      )
-      .then((res) => {
-        setTimeout(() => {
-          console.log(res);
-          setEmailResponse(false);
-          setLoadingEmail(false);
-          setThankYouMessage(true);
-        }, 3000);
-      })
-      .then(() => {
-        setTimeout(() => {
-          setThankYouMessage(false);
-        }, 5000);
-      })
-      .catch((err) => console.log(err));
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+    setErrors((prevErrors) => ({ ...prevErrors, name: "" }));
   };
 
-  const messageBox = () => {
-    if (locale == "es") {
-      return es.sendMessage;
-    } else if (locale == "fr") {
-      return fr.sendMessage;
-    } else {
-      return en.sendMessage;
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    setErrors((prevErrors) => ({ ...prevErrors, email: "" }));
+  };
+
+  const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(e.target.value);
+    setErrors((prevErrors) => ({ ...prevErrors, message: "" }));
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!name.trim()) {
+      setErrors((prevErrors) => ({ ...prevErrors, name: "Nombre requerido" }));
+      return;
     }
+
+    if (!email.trim()) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: "Correo requerido" }));
+      return;
+    }
+
+    if (!message.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        message: "Mensaje requerido",
+      }));
+      return;
+    }
+    setLoading(true);
+
+    axios.defaults.headers.post["Content-Type"] = "application/json";
+    axios
+      .post("https://formsubmit.co/ajax/fprios112@gmail.com", {
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          setLoading(false);
+          setName("")
+          setEmail("")
+          setMessage("")
+        }
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
-    <section
-      className="section is-medium is-primary has-text-centered  bottom-div"
-      id="contact"
-    >
-      <h1 className="title is-spaced is-size-3-desktop is-size-4-mobile contact-container-title">
-        {[
-          locale === "es-PE" && es.contactTitle,
-          locale === "en-US" && en.contactTitle,
-          locale === "fr-CA" && fr.contactTitle,
-        ]}
-      </h1>
-      {loadingEmail ? (
-        <div className="box has-text-centered is-narrow container">
-          <div className="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <section className="md:my-20" id="contact">
+      <div className="px-10 w-10/12 my-4 mx-auto border-2 rounded-3xl shadow max-w-6xl py-8 hover:bg-gray-200">
+        <div className="md:flex items-start justify-center">
+          <div className="md:w-6/12 md:p-6 pb-6">
+            <p className="md:text-3xl text-xl">
+              Si tienes cualquier duda o quieres que trabajemos juntos, déjame
+              un mensaje y te responderé a la brevedad.
+            </p>
           </div>
-        </div>
-      ) : thankYouMessage ? (
-        <div className="thankyou-container">
-          <Icon icon="akar-icons:circle-check" color="white" width="100" />
-          <p className="thankyou-message">
-            {[
-              locale === "es-PE" && es.graciasMensaje,
-              locale === "en-US" && en.thankYouMessage,
-              locale === "fr-CA" && fr.merciMessage,
-            ]}
-          </p>
-        </div>
-      ) : (
-        <form className="contact-form-home-container" onSubmit={sendEmail}>
-          <div className="container is-narrow">
-            <div className="box">
-              <div className="field">
-                <label className="label">
-                  {[
-                    locale === "es-PE" && es.contactInputOne,
-                    locale === "en-US" && en.contactInputOne,
-                    locale === "fr-CA" && fr.contactInputOne,
-                  ]}
-                </label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    id="exampleFormControlInput1"
-                    placeholder="Peter Parker"
-                    name="name"
-                    required={true}
-                  />
-                </div>
-              </div>
-
-              <div className="field">
-                <label className="label">
-                  {[
-                    locale === "es-PE" && es.contactInputTwo,
-                    locale === "en-US" && en.contactInputTwo,
-                    locale === "fr-CA" && fr.contactInputTwo,
-                  ]}
-                </label>
-
-                <input
-                  type="email"
-                  className="input"
-                  id="exampleFormControlInput1"
-                  placeholder="peter@spiderman.com"
-                  name="email"
-                  required={true}
-                />
-              </div>
-
-              <div className="field">
-                <label className="label">
-                  {[
-                    locale === "es-PE" && es.contactInputThree,
-                    locale === "en-US" && en.contactInputThree,
-                    locale === "fr-CA" && fr.contactInputThree,
-                  ]}
-                </label>
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    id="exampleFormControlTextarea1"
-                    rows={5}
-                    name="message"
-                    required={true}
-                  ></textarea>
-                </div>
-              </div>
-
-              <div className="field is-grouped">
-                <div className="control ">
-                  {/* <button className="button is-link">Send Message</button> */}
-                  <input
-                    type="submit"
-                    value={messageBox()}
-                    className="button is-link submit-button"
-                  />
-                </div>
-              </div>
+          <form onSubmit={handleSubmit} method="POST" className="md:w-6/12">
+            <div className="mb-4">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nombre"
+                className={`w-full px-3 py-2 border ${
+                  errors.name ? "border-red-500" : "border-gray-300"
+                } rounded-md focus:outline-none focus:border-blue-500`}
+                value={name}
+                onChange={handleNameChange}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name}</p>
+              )}
             </div>
-          </div>
-        </form>
-      )}
-      {/* </div> */}
+            <div className="mb-4">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Correo"
+                className={`w-full px-3 py-2 border ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                } rounded-md focus:outline-none focus:border-blue-500`}
+                value={email}
+                onChange={handleEmailChange}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email}</p>
+              )}
+            </div>
+            <div className="mb-4">
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                placeholder="Mensaje"
+                className={`w-full px-3 py-2 border ${
+                  errors.message ? "border-red-500" : "border-gray-300"
+                } rounded-md focus:outline-none focus:border-blue-500`}
+                value={message}
+                onChange={handleMessageChange}
+              ></textarea>
+              {errors.message && (
+                <p className="text-red-500 text-sm">{errors.message}</p>
+              )}
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded transition duration-500 ease-in-out"
+            >
+              {loading ? "Enviando..." : "Enviar"}
+            </button>
+            <input type="hidden" name="_next" value={"http://localhost:3000"} />
+            <input type="hidden" name="_captcha" value="false" />
+          </form>
+        </div>
+      </div>
     </section>
   );
 };

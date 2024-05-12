@@ -45,7 +45,7 @@ export const Skills = () => {
               <p className="text-xl font-bold pb-2">Stack:</p>
               <div className="space-y-2">
                 {skill.stack.map((i) => (
-                  <p className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer md:text-sm">{i}</p>
+                  <p className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer md:text-sm transition duration-500 ease-in-out">{i}</p>
                 ))}
               </div>
             </div>

@@ -19,7 +19,7 @@ export const ProfileCard = () => {
           industria y experiencia con clientes en varios paises alrededor del
           mundo, si te gusta mi trabajo, conversemos.
         </p>
-        <button className="bg-white hover:bg-black hover:text-white text-black font-semibold py-4 px-6 border border-gray-400 rounded shadow text-xl">
+        <button className="bg-white hover:bg-black hover:text-white text-black font-semibold py-4 px-6 border border-gray-400 rounded shadow text-xl transition duration-500 ease-in-out">
           Let's Talk
         </button>
 

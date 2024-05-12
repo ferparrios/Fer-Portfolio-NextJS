@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { PortfolioGrid } from "@components/index";
+import { OpenSourceProjectsGrid } from "@components/index";
 import { useRouter } from "next/router";
 import { en } from "i18n/en";
 import { es } from "../../i18n/es";
 import { fr } from "../../i18n/fr";
-import { portfolioData } from "banners-data";
+import { openSourceProjectsData } from "banners-data";
 
-export const PortfolioContainer = () => {
+export const OpenSourceProjectsContainer = () => {
   const { locale } = useRouter();
   const [currentPage, setCurrentPage] = useState(0);
   const isMobile = useMediaQuery({ maxWidth: 1024 }); 
   const itemsPerPage = isMobile ? 2 : 6; 
-  const pagesCount = Math.ceil(portfolioData.length / itemsPerPage);
+  const pagesCount = Math.ceil(openSourceProjectsData.length / itemsPerPage);
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, pagesCount - 1));
@@ -23,18 +23,18 @@ export const PortfolioContainer = () => {
   };
 
   const startIndex = currentPage * itemsPerPage;
-  const endIndex = Math.min(startIndex + itemsPerPage, portfolioData.length);
+  const endIndex = Math.min(startIndex + itemsPerPage, openSourceProjectsData.length);
 
   return (
-    <section className="md:my-20" >
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-        {portfolioData.slice(startIndex, endIndex).map((item, index) => (
-          <PortfolioGrid
+    <section className="md:my-20" id="portfolio">
+      <div className="grid grid-cols-1">
+        {openSourceProjectsData.slice(startIndex, endIndex).map((item, index) => (
+          <OpenSourceProjectsGrid
             title={item.title}
             image={item.image}
             link={item.productionLink}
-            androidLink={item.androidLink}
-            iosLink={item.iosLink}
+            // androidLink={item.androidLink}
+            // iosLink={item.iosLink}
             key={startIndex + index}
             description={item.description}
             tecs={item.tecnologies}

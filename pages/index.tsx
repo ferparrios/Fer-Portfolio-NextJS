@@ -6,6 +6,7 @@ import {
   Layout,
   About,
   SocialMediaBox,
+  OpenSourceProjectsContainer,
 } from "@components/index";
 import { Skills } from "@components/Skills/Skills";
 
@@ -32,13 +33,20 @@ const Home: NextPage = () => {
         </h2>
       </div>
       <Skills />
-      <div className="px-12">
-      <h2 className="text-xl md:text-3xl font-bold">
-        My Work: Highlighted Software development projects
-      </h2>
+      <div className="px-12" id="portfolio">
+        <h2 className="text-xl md:text-3xl font-bold">
+          My Work: Highlighted Software development projects
+        </h2>
       </div>
       <PortfolioContainer />
-      {/* <ContactContainer /> */}
+      <div className="px-12 pt-12">
+        <h2 className="text-xl md:text-3xl font-bold">Open Source Projects</h2>
+      </div>
+      <OpenSourceProjectsContainer />
+      <div className="px-12 pt-12">
+        <h2 className="text-xl md:text-3xl font-bold">Let's connect</h2>
+      </div>
+      <ContactContainer />
       {/* <SocialMediaBox /> */}
     </>
   );

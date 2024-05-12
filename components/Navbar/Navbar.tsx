@@ -69,7 +69,7 @@ export const Navbar = () => {
         </div>
         <div className="hidden relative lg:block">
           <button
-            className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
+            className="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded transition duration-500 ease-in-out"
             onClick={() => setLanguageMenu(!languageMenu)}
           >
             <a className="navbar-link">
