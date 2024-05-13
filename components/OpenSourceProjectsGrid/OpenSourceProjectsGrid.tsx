@@ -30,7 +30,7 @@ export const OpenSourceProjectsGrid = ({
       return (
         <div className="flex space-x-2">
           {androidLink !== "" && (
-            <a href={androidLink} target="_blank">
+            <a href={androidLink} target="_blank" rel="noreferrer">
               <Icon
                 icon="bi:android2"
                 color="black"
@@ -40,7 +40,7 @@ export const OpenSourceProjectsGrid = ({
             </a>
           )}
           {iosLink !== "" && (
-            <a href={iosLink} target="_blank">
+            <a href={iosLink} target="_blank" rel="noreferrer">
               <Icon
                 icon="uil:apple"
                 color="black"
@@ -55,7 +55,7 @@ export const OpenSourceProjectsGrid = ({
       return (
         <>
           {link !== "" && (
-            <a href={link} target="_blank">
+            <a href={link} target="_blank" rel="noreferrer">
               <Icon
                 icon="mdi:web"
                 color="black"
