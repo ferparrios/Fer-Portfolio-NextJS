@@ -1,21 +1,21 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import { useRouter } from "next/router";
 import { en } from "i18n/en";
 import { es } from "i18n/es";
 import { fr } from "i18n/fr";
+import { useRouter } from "next/router";
 
-export interface PortfolioGridProps {
+export interface OpenSourceProjectsProps {
   image: string;
   title: string;
-  description?: string | any;
+  description?: any;
   link?: string;
   tecs: string[];
   androidLink?: string;
   iosLink?: string;
 }
 
-export const PortfolioGrid = ({
+export const OpenSourceProjectsGrid = ({
   image,
   title,
   description,
@@ -23,7 +23,7 @@ export const PortfolioGrid = ({
   tecs,
   androidLink,
   iosLink,
-}: PortfolioGridProps) => {
+}: OpenSourceProjectsProps) => {
   const { locale } = useRouter();
   const getLinkIcon = () => {
     if (androidLink || iosLink) {
@@ -76,8 +76,8 @@ export const PortfolioGrid = ({
         <img src={image} className="w-1/3 md:w-1/4 rounded-lg" alt={title} />
         <h1 className="font-semibold">{title}</h1>
       </div>
-      <p className="py-4 md:px-2 md:h-auto">{description}</p>
-      <div className="md:h-32">
+      <p className="py-4 md:px-2">{description}</p>
+      <div className="">
         {tecs.map((tec, index) => (
           <div className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer transition duration-500 ease-in-out" key={index}>
             <p>{tec}</p>

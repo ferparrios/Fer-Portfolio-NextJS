@@ -1,9 +1,11 @@
-export * from "./Layout/Layout";
+export * from "./About/About";
 export * from "./ContactContainer/ContactContainer";
 export * from "./FooterContainer/FooterContainer";
-export * from "./PortfolioContainer/PortfolioContainer";
+export * from "./Layout/Layout";
 export * from "./Navbar/Navbar";
-export * from "./ProfileCard/ProfileCard";
-export * from "./About/About";
+export * from "./OpenSourceProjectsGrid/OpenSourceProjectsGrid";
+export * from "./PortfolioContainer/PortfolioContainer";
 export * from "./PortfolioGrid/PortfolioGrid";
+export * from "./ProfileCard/ProfileCard";
 export * from "./SocialMediaBox/SocialMediaBox";
+export * from"./OpenSourceProjectsContainer/OpenSourceProjectsContainer";

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
 
 * {
@@ -131,9 +135,9 @@ section {
   background-color: black;
 }
 
-.caption-box h1 {
+/* .caption-box h1 {
   color: white;
-}
+} */
 
 /* bottom div */
 
@@ -205,10 +209,6 @@ section {
     justify-content: center !important;
     align-items: center !important;
   }
-}
-
-h1 {
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif !important; */
 }
 
 a {
@@ -385,9 +385,9 @@ nav .navbar-item {
 
 /* About */
 
-h2 {
-  color: #ffffff!important;
-}
+/* h2 {
+  color: #ffffff !important;
+} */
 
 /* Contact Container */
 
@@ -396,10 +396,10 @@ h2 {
 }
 
 .submit-button {
-  background-color: #ffffff!important;
+  background-color: #ffffff !important;
   color: #8060f6 !important;
-  font-weight: bold!important;
-  border: 2px solid #8060f6!important;
+  font-weight: bold !important;
+  border: 2px solid #8060f6 !important;
 }
 
 .submit-button:hover {
@@ -409,11 +409,11 @@ h2 {
 }
 
 textarea:focus {
-  border: 2px solid #8060f6!important;
+  border: 2px solid #8060f6 !important;
 }
 
 input:focus {
-  border: 2px solid #8060f6!important;
+  border: 2px solid #8060f6 !important;
 }
 
 .thankyou-message {
@@ -437,10 +437,10 @@ input:focus {
 /* Footer */
 
 .social-media-box a {
-  color: #8060f6!important;
+  color: #8060f6 !important;
 }
 
 .footer-container a {
-  color: #8060f6!important;
-  font-weight: bold!important;
+  color: #8060f6 !important;
+  font-weight: bold !important;
 }
