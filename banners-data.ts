@@ -15,6 +15,12 @@
 //     link: "https://surtido.pe/author/fernando-paredes-rios/",
 //   },
 // ];
+// import { es } from "i18n/es";
+// import { en } from "i18n/en";
+// import { fr } from "i18n/fr";
+// import { useRouter } from "next/router";
+
+
 
 export const portfolioData = [
   {

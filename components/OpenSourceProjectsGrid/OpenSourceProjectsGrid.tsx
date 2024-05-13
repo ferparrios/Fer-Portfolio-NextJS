@@ -1,11 +1,14 @@
 import React from "react";
-import { en } from "i18n/en";
 import { Icon } from "@iconify/react";
+import { en } from "i18n/en";
+import { es } from "i18n/es";
+import { fr } from "i18n/fr";
+import { useRouter } from "next/router";
 
 export interface OpenSourceProjectsProps {
   image: string;
   title: string;
-  description?: string;
+  description?: any;
   link?: string;
   tecs: string[];
   androidLink?: string;
@@ -21,18 +24,29 @@ export const OpenSourceProjectsGrid = ({
   androidLink,
   iosLink,
 }: OpenSourceProjectsProps) => {
+  const { locale } = useRouter();
   const getLinkIcon = () => {
     if (androidLink || iosLink) {
       return (
         <div className="flex space-x-2">
           {androidLink !== "" && (
             <a href={androidLink} target="_blank">
-              <Icon icon="bi:android2" color="black" width="40" className="hover:animate-bounce" />
+              <Icon
+                icon="bi:android2"
+                color="black"
+                width="40"
+                className="hover:animate-bounce"
+              />
             </a>
           )}
           {iosLink !== "" && (
             <a href={iosLink} target="_blank">
-              <Icon icon="uil:apple" color="black" width="40" className="hover:animate-bounce"/>
+              <Icon
+                icon="uil:apple"
+                color="black"
+                width="40"
+                className="hover:animate-bounce"
+              />
             </a>
           )}
         </div>
@@ -42,7 +56,12 @@ export const OpenSourceProjectsGrid = ({
         <>
           {link !== "" && (
             <a href={link} target="_blank">
-              <Icon icon="mdi:web" color="black" width="40" className="hover:animate-bounce" />
+              <Icon
+                icon="mdi:web"
+                color="black"
+                width="40"
+                className="hover:animate-bounce"
+              />
             </a>
           )}
         </>
@@ -59,14 +78,22 @@ export const OpenSourceProjectsGrid = ({
       </div>
       <p className="py-4 md:px-2">{description}</p>
       <div className="">
-        {tecs.map((tec) => (
-          <div className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer transition duration-500 ease-in-out">
+        {tecs.map((tec, index) => (
+          <div className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer transition duration-500 ease-in-out" key={index}>
             <p>{tec}</p>
           </div>
         ))}
       </div>
       <div className="flex items-center justify-between cursor-pointer py-4 md:py-0 md:px-8">
-        {androidLink || link || iosLink ? <h3 className="text-sm md:text-base">Check the project on:</h3> : null}
+        {androidLink || link || iosLink ? (
+          <h3 className="text-sm md:text-base">
+            {[
+              locale === "es-PE" && es.checkProject,
+              locale === "en-US" && en.checkProject,
+              locale === "fr-CA" && fr.checkProject,
+            ]}
+          </h3>
+        ) : null}
         {getLinkIcon()}
       </div>
     </div>

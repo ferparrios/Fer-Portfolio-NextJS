@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const ModalMenu = ({ setShowMenu }: Props) => {
-  const { locale, locales, defaultLocale, route } = useRouter();
+  const { locale } = useRouter();
   const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
   const localeOptions = [
@@ -42,22 +42,6 @@ export const ModalMenu = ({ setShowMenu }: Props) => {
         (locale === "en-US" && en.languageMenu) ||
         (locale === "fr-CA" && fr.languajeMenu),
     },
-
-    // [
-    //   locale === "es-PE" && es.portfolioMenu,
-    //   locale === "en-US" && en.portfolioMenu,
-    //   locale === "fr-CA" && fr.portfolioMenu,
-    // ],
-    // [
-    //   locale === "es-PE" && es.contactMenu,
-    //   locale === "en-US" && en.contactMenu,
-    //   locale === "fr-CA" && fr.contactMenu,
-    // ],
-    // [
-    //   locale === "es-PE" && es.languajeMenu,
-    //   locale === "en-US" && en.languageMenu,
-    //   locale === "fr-CA" && fr.languajeMenu,
-    // ],
   ];
 
   const languagesOptions = [
@@ -83,8 +67,8 @@ export const ModalMenu = ({ setShowMenu }: Props) => {
         <div className="bg-white sm:p-6 sm:pb-4">
           <div className="sm:flex sm:items-start p-10">
             <ul className="space-y-2">
-              {localeOptions.map((loc) => (
-                <li className="list-disc">
+              {localeOptions.map((loc, index) => (
+                <li className="list-disc" key={index}>
                   <Link href={loc.link}>
                     <a
                       className="text-xl font-semibold"
@@ -109,8 +93,8 @@ export const ModalMenu = ({ setShowMenu }: Props) => {
             </ul>
             {showLanguageMenu && (
               <ul>
-                {languagesOptions.map((lang) => (
-                  <li>
+                {languagesOptions.map((lang, index) => (
+                  <li key={index}>
                     <Link href={"/"} locale={lang.loc}>
                       <a
                         className="dropdown-item text-xl"

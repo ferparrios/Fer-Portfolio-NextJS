@@ -48,7 +48,7 @@ export const Navbar = () => {
             </a>
           </Link>
           <Link href={"/"}>
-            <a className="hover:underline text-black font-semibold  text-xl md:text-2xl pr-4">
+            <a className="text-black font-semibold  text-xl md:text-2xl pr-4 pb-2 relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
               {/* {[en.name]} */}
               Fernando <br />
               Paredes Rios
@@ -58,9 +58,9 @@ export const Navbar = () => {
             id="navbarBasicExample"
             className="hidden space-x-16 px-6 lg:block"
           >
-            {localeOptions.map((loc) => (
-              <Link href={loc.route}>
-                <a className="hover:underline text-black font-normal text-xl">
+            {localeOptions.map((loc, index) => (
+              <Link href={loc.route} key={index}>
+                <a className="text-black font-normal text-xl pb-2 relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
                   {loc.loc}
                 </a>
               </Link>
@@ -83,13 +83,31 @@ export const Navbar = () => {
           {languageMenu && (
             <div className="navbar-dropdown absolute top-10 right-2 bg-white shadow-md mt-2 w-24">
               <Link href={"/"} locale={"en-US"}>
-                <a className="dropdown-item block px-4 py-2">EN</a>
+                <a className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold" onClick={() => setLanguageMenu(!languageMenu)}>
+                  {[
+                    locale === "es-PE" && es.englishMenu,
+                    locale === "en-US" && en.englishMenu,
+                    locale === "fr-CA" && fr.englishMenu,
+                  ]}
+                </a>
               </Link>
               <Link href={"/"} locale={"es-PE"}>
-                <a className="dropdown-item block px-4 py-2">ES</a>
+                <a className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold" onClick={() => setLanguageMenu(!languageMenu)}>
+                {[
+                    locale === "es-PE" && es.spanishMenu,
+                    locale === "en-US" && en.spanishMenu,
+                    locale === "fr-CA" && fr.spanishMenu,
+                  ]}
+                </a>
               </Link>
               <Link href={"/"} locale={"fr-CA"}>
-                <a className="dropdown-item block px-4 py-2">FR</a>
+                <a className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold" onClick={() => setLanguageMenu(!languageMenu)}>
+                {[
+                    locale === "es-PE" && es.frenchMenu,
+                    locale === "en-US" && en.frenchMenu,
+                    locale === "fr-CA" && fr.frenchMenu,
+                  ]}
+                </a>
               </Link>
             </div>
           )}

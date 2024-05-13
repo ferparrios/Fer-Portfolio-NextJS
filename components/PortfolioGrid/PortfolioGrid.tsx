@@ -1,11 +1,14 @@
 import React from "react";
-import { en } from "i18n/en";
 import { Icon } from "@iconify/react";
+import { useRouter } from "next/router";
+import { en } from "i18n/en";
+import { es } from "i18n/es";
+import { fr } from "i18n/fr";
 
 export interface PortfolioGridProps {
   image: string;
   title: string;
-  description?: string;
+  description?: string | any;
   link?: string;
   tecs: string[];
   androidLink?: string;
@@ -21,18 +24,29 @@ export const PortfolioGrid = ({
   androidLink,
   iosLink,
 }: PortfolioGridProps) => {
+  const { locale } = useRouter();
   const getLinkIcon = () => {
     if (androidLink || iosLink) {
       return (
         <div className="flex space-x-2">
           {androidLink !== "" && (
             <a href={androidLink} target="_blank">
-              <Icon icon="bi:android2" color="black" width="40" className="hover:animate-bounce" />
+              <Icon
+                icon="bi:android2"
+                color="black"
+                width="40"
+                className="hover:animate-bounce"
+              />
             </a>
           )}
           {iosLink !== "" && (
             <a href={iosLink} target="_blank">
-              <Icon icon="uil:apple" color="black" width="40" className="hover:animate-bounce"/>
+              <Icon
+                icon="uil:apple"
+                color="black"
+                width="40"
+                className="hover:animate-bounce"
+              />
             </a>
           )}
         </div>
@@ -42,7 +56,12 @@ export const PortfolioGrid = ({
         <>
           {link !== "" && (
             <a href={link} target="_blank">
-              <Icon icon="mdi:web" color="black" width="40" className="hover:animate-bounce" />
+              <Icon
+                icon="mdi:web"
+                color="black"
+                width="40"
+                className="hover:animate-bounce"
+              />
             </a>
           )}
         </>
@@ -57,16 +76,24 @@ export const PortfolioGrid = ({
         <img src={image} className="w-1/3 md:w-1/4 rounded-lg" alt={title} />
         <h1 className="font-semibold">{title}</h1>
       </div>
-      <p className="py-4 md:px-2 md:h-80">{description}</p>
+      <p className="py-4 md:px-2 md:h-auto">{description}</p>
       <div className="md:h-32">
-        {tecs.map((tec) => (
-          <div className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer transition duration-500 ease-in-out">
+        {tecs.map((tec, index) => (
+          <div className="inline-flex items-center rounded-md bg-black px-2 py-0.5 font-medium text-white mr-1 my-1 hover:scale-150 cursor-pointer transition duration-500 ease-in-out" key={index}>
             <p>{tec}</p>
           </div>
         ))}
       </div>
       <div className="flex items-center justify-between cursor-pointer py-4 md:py-0 md:px-8">
-        {androidLink || link || iosLink ? <h3 className="text-sm md:text-base">Check the project on:</h3> : null}
+        {androidLink || link || iosLink ? (
+          <h3 className="text-sm md:text-base">
+            {[
+              locale === "es-PE" && es.checkProject,
+              locale === "en-US" && en.checkProject,
+              locale === "fr-CA" && fr.checkProject,
+            ]}
+          </h3>
+        ) : null}
         {getLinkIcon()}
       </div>
     </div>

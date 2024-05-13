@@ -1,8 +1,13 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Icon } from "@iconify/react";
 import axios from "axios";
+import { useRouter } from "next/router";
+import { es } from "i18n/es";
+import { en } from "i18n/en";
+import { fr } from "i18n/fr";
 
 export const ContactContainer = () => {
+  const { locale } = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -60,13 +65,63 @@ export const ContactContainer = () => {
       .then((response) => {
         if (response.status == 200) {
           setLoading(false);
-          setName("")
-          setEmail("")
-          setMessage("")
+          setName("");
+          setEmail("");
+          setMessage("");
         }
         console.log(response);
       })
       .catch((error) => console.log(error));
+  };
+
+  const placeHolderName = () => {
+    if (locale === "es-PE") {
+      return es.formName;
+    } else if (locale === "en-US") {
+      return en.formName;
+    } else {
+      return fr.formName;
+    }
+  };
+
+  const placeHolderEmail = () => {
+    if (locale === "es-PE") {
+      return es.formEmail;
+    } else if (locale === "en-US") {
+      return en.formEmail;
+    } else {
+      return fr.formEmail;
+    }
+  };
+
+  const placeHolderTextArea = () => {
+    if (locale === "es-PE") {
+      return es.formTextArea;
+    } else if (locale === "en-US") {
+      return en.formTextArea;
+    } else {
+      return fr.formTextArea;
+    }
+  };
+
+  const enviarText = () => {
+    if (locale === "es-PE") {
+      return es.formButton;
+    } else if (locale === "en-US") {
+      return en.formButton;
+    } else {
+      return fr.formButton;
+    }
+  };
+
+  const enviandoText = () => {
+    if (locale === "es-PE") {
+      return es.formSending;
+    } else if (locale === "en-US") {
+      return en.formSending;
+    } else {
+      return fr.formSending;
+    }
   };
 
   return (
@@ -75,8 +130,11 @@ export const ContactContainer = () => {
         <div className="md:flex items-start justify-center">
           <div className="md:w-6/12 md:p-6 pb-6">
             <p className="md:text-3xl text-xl">
-              Si tienes cualquier duda o quieres que trabajemos juntos, déjame
-              un mensaje y te responderé a la brevedad.
+              {[
+                locale === "es-PE" && es.formMessage,
+                locale === "en-US" && en.formMessage,
+                locale === "fr-CA" && fr.formMessage,
+              ]}
             </p>
           </div>
           <form onSubmit={handleSubmit} method="POST" className="md:w-6/12">
@@ -85,7 +143,7 @@ export const ContactContainer = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Nombre"
+                placeholder={placeHolderName()}
                 className={`w-full px-3 py-2 border ${
                   errors.name ? "border-red-500" : "border-gray-300"
                 } rounded-md focus:outline-none focus:border-blue-500`}
@@ -101,7 +159,7 @@ export const ContactContainer = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Correo"
+                placeholder={placeHolderEmail()}
                 className={`w-full px-3 py-2 border ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 } rounded-md focus:outline-none focus:border-blue-500`}
@@ -117,7 +175,7 @@ export const ContactContainer = () => {
                 id="message"
                 name="message"
                 rows={4}
-                placeholder="Mensaje"
+                placeholder={placeHolderTextArea()}
                 className={`w-full px-3 py-2 border ${
                   errors.message ? "border-red-500" : "border-gray-300"
                 } rounded-md focus:outline-none focus:border-blue-500`}
@@ -132,7 +190,7 @@ export const ContactContainer = () => {
               type="submit"
               className="w-full bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded transition duration-500 ease-in-out"
             >
-              {loading ? "Enviando..." : "Enviar"}
+              {loading ? enviandoText() : enviarText()}
             </button>
             <input type="hidden" name="_next" value={"http://localhost:3000"} />
             <input type="hidden" name="_captcha" value="false" />
