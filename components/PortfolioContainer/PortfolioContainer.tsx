@@ -79,8 +79,8 @@ export const PortfolioContainer = () => {
       image: "images/vizi_icon.png",
       title: "Vizi Biker",
       githubLink: "https://github.com/ferparrios/React-News-Search",
-      androidLink: "",
-      iosLink: "",
+      androidLink: "https://play.google.com/store/apps/details?id=com.vizispot.biker",
+      iosLink: "https://apps.apple.com/in/app/vizi-biker/id6444961209",
       description:
         (locale === "es-PE" && es.viziBikerDescription) ||
         (locale === "en-US" && en.viziBikerDescription) ||
