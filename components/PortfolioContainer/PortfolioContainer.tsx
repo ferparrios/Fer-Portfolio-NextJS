@@ -11,6 +11,43 @@ export const PortfolioContainer = () => {
   const { locale } = useRouter();
   const portfolioData = [
     {
+      image: "images/findadevjob-icon.png",
+      title: "FindadevJob",
+      githubLink: "",
+      productionLink: "https://findadevjob.com/",
+      description:
+        (locale === "es-PE" && es.findadevjobDescription) ||
+        (locale === "en-US" && en.findadevjobDescription) ||
+        (locale === "fr-CA" && fr.findadevjobDescription),
+      tecnologies: [
+        "Python",
+        "Django",
+        "Django Rest Framework",
+        "PostgreSQL",
+        "Docker",
+        "Git",
+      ],
+    },
+    {
+      image: "images/adria-logo.png",
+      title: "AdriaLabs",
+      githubLink: "https://github.com/adrialabs-dev/adrialabs-home",
+      productionLink: "https://www.adrialabs.dev/",
+      description:
+        (locale === "es-PE" && es.adrialabsDescription) ||
+        (locale === "en-US" && en.adrialabsDescription) ||
+        (locale === "fr-CA" && fr.adrialabsDescription),
+      tecnologies: [
+        "NextJs",
+        "React",
+        "Tailwind CSS",
+        "Typescript",
+        "Node.js",
+        "Express",
+        "Git",
+      ],
+    },
+    {
       image: "images/cios-mobile-app-logo.png",
       title: "Fincite | Cios",
       githubLink: "https://github.com/ferparrios/React-News-Search",
@@ -79,7 +116,8 @@ export const PortfolioContainer = () => {
       image: "images/vizi_icon.png",
       title: "Vizi Biker",
       githubLink: "https://github.com/ferparrios/React-News-Search",
-      androidLink: "https://play.google.com/store/apps/details?id=com.vizispot.biker",
+      androidLink:
+        "https://play.google.com/store/apps/details?id=com.vizispot.biker",
       iosLink: "https://apps.apple.com/in/app/vizi-biker/id6444961209",
       description:
         (locale === "es-PE" && es.viziBikerDescription) ||
@@ -299,10 +337,10 @@ export const PortfolioContainer = () => {
             className="px-4 py-2 bg-white text-black rounded-md hover:scale-150 hover:bg-black hover:text-white border-2 transition duration-700 ease-in-out"
           >
             {[
-                locale === "es-PE" && es.buttonPrev,
-                locale === "en-US" && en.buttonPrev,
-                locale === "fr-CA" && fr.buttonPrev,
-              ]}
+              locale === "es-PE" && es.buttonPrev,
+              locale === "en-US" && en.buttonPrev,
+              locale === "fr-CA" && fr.buttonPrev,
+            ]}
           </button>
           <button
             onClick={handleNextPage}
@@ -310,10 +348,10 @@ export const PortfolioContainer = () => {
             className="px-4 py-2 bg-white text-black rounded-md hover:scale-150 hover:bg-black hover:text-white border-2 transition duration-700 ease-in-out"
           >
             {[
-                locale === "es-PE" && es.buttonNext,
-                locale === "en-US" && en.buttonNext,
-                locale === "fr-CA" && fr.buttonNext,
-              ]}
+              locale === "es-PE" && es.buttonNext,
+              locale === "en-US" && en.buttonNext,
+              locale === "fr-CA" && fr.buttonNext,
+            ]}
           </button>
         </div>
       )}

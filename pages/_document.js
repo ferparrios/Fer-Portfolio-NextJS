@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Fernando Paredes Rios</title>
+          <header>Fernando Paredes Rios</header>
           
         </Head>
         

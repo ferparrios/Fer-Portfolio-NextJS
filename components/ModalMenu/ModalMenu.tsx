@@ -70,7 +70,7 @@ export const ModalMenu = ({ setShowMenu }: Props) => {
               {localeOptions.map((loc, index) => (
                 <li className="list-disc" key={index}>
                   <Link href={loc.link}>
-                    <a
+                    <p
                       className="text-xl font-semibold"
                       onClick={() => {
                         if (
@@ -86,7 +86,7 @@ export const ModalMenu = ({ setShowMenu }: Props) => {
                       }}
                     >
                       {loc.title}
-                    </a>
+                    </p>
                   </Link>
                 </li>
               ))}
@@ -96,14 +96,14 @@ export const ModalMenu = ({ setShowMenu }: Props) => {
                 {languagesOptions.map((lang, index) => (
                   <li key={index}>
                     <Link href={"/"} locale={lang.loc}>
-                      <a
+                      <p
                         className="dropdown-item text-xl"
                         onClick={() => {
                           setShowLanguageMenu(!showLanguageMenu);
                         }}
                       >
                         {lang.title}
-                      </a>
+                      </p>
                     </Link>
                   </li>
                 ))}

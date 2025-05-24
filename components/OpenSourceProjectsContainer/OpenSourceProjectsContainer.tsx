@@ -11,9 +11,9 @@ export const OpenSourceProjectsContainer = () => {
   const openSourceProjectsData = [
     {
       image: "images/npm-package-image.png",
-      title: "Xexe-Cli",
-      githubLink: "https://github.com/ferparrios/React-News-Search",
-      productionLink: "https://www.npmjs.com/package/xexe-cli",
+      title: "Easy React Native CLI",
+      githubLink: "https://github.com/adrialabs-dev/easy-react-native",
+      productionLink: "https://www.npmjs.com/package/ern-cli",
       description:
         (locale === "es-PE" && es.xexeCliProjectDescription) ||
         (locale === "en-US" && en.xexeCliProjectDescription) ||

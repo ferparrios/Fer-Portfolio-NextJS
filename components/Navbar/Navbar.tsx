@@ -42,27 +42,28 @@ export const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white ">
       <div className="flex items-center justify-between px-2 py-2 max-w-screen-2xl">
         <div className="flex items-center space-x-4">
-          <Link href="/">
-            <a className="navbar-item">
-              <img src="images/fer-avatar.jpg" width="70px" height="100%" />
-            </a>
+          <Link href="/" className="navbar-item">
+            <img src="images/fer-avatar.jpg" width="70px" height="100%" />
           </Link>
-          <Link href={"/"}>
-            <a className="text-black font-semibold  text-xl md:text-2xl pr-4 pb-2 relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
-              {/* {[en.name]} */}
-              Fernando <br />
-              Paredes Rios
-            </a>
+          <Link
+            href={"/"}
+            className="text-black font-semibold  text-xl md:text-2xl pr-4 pb-2 relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+          >
+            {/* {[en.name]} */}
+            Fernando <br />
+            Paredes Rios
           </Link>
           <div
             id="navbarBasicExample"
             className="hidden space-x-16 px-6 lg:block"
           >
             {localeOptions.map((loc, index) => (
-              <Link href={loc.route} key={index}>
-                <a className="text-black font-normal text-xl pb-2 relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer">
-                  {loc.loc}
-                </a>
+              <Link
+                href={loc.route}
+                key={index}
+                className="text-black font-normal text-xl pb-2 relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300 cursor-pointer"
+              >
+                {loc.loc}
               </Link>
             ))}
           </div>
@@ -82,32 +83,41 @@ export const Navbar = () => {
           </button>
           {languageMenu && (
             <div className="navbar-dropdown absolute top-10 right-2 bg-white shadow-md mt-2 w-24">
-              <Link href={"/"} locale={"en-US"}>
-                <a className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold" onClick={() => setLanguageMenu(!languageMenu)}>
-                  {[
-                    locale === "es-PE" && es.englishMenu,
-                    locale === "en-US" && en.englishMenu,
-                    locale === "fr-CA" && fr.englishMenu,
-                  ]}
-                </a>
-              </Link>
-              <Link href={"/"} locale={"es-PE"}>
-                <a className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold" onClick={() => setLanguageMenu(!languageMenu)}>
+              <Link
+                href={"/"}
+                locale={"en-US"}
+                className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold"
+                onClick={() => setLanguageMenu(!languageMenu)}
+              >
                 {[
-                    locale === "es-PE" && es.spanishMenu,
-                    locale === "en-US" && en.spanishMenu,
-                    locale === "fr-CA" && fr.spanishMenu,
-                  ]}
-                </a>
+                  locale === "es-PE" && es.englishMenu,
+                  locale === "en-US" && en.englishMenu,
+                  locale === "fr-CA" && fr.englishMenu,
+                ]}
               </Link>
-              <Link href={"/"} locale={"fr-CA"}>
-                <a className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold" onClick={() => setLanguageMenu(!languageMenu)}>
+              <Link
+                href={"/"}
+                locale={"es-PE"}
+                className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold"
+                onClick={() => setLanguageMenu(!languageMenu)}
+              >
                 {[
-                    locale === "es-PE" && es.frenchMenu,
-                    locale === "en-US" && en.frenchMenu,
-                    locale === "fr-CA" && fr.frenchMenu,
-                  ]}
-                </a>
+                  locale === "es-PE" && es.spanishMenu,
+                  locale === "en-US" && en.spanishMenu,
+                  locale === "fr-CA" && fr.spanishMenu,
+                ]}
+              </Link>
+              <Link
+                href={"/"}
+                locale={"fr-CA"}
+                className="block px-4 py-2 hover:bg-black hover:text-white transition duration-500 ease-in-out font-semibold"
+                onClick={() => setLanguageMenu(!languageMenu)}
+              >
+                {[
+                  locale === "es-PE" && es.frenchMenu,
+                  locale === "en-US" && en.frenchMenu,
+                  locale === "fr-CA" && fr.frenchMenu,
+                ]}
               </Link>
             </div>
           )}
