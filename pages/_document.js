@@ -5,11 +5,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <header>Fernando Paredes Rios</header>
-          
+          {/* <header>Fernando Paredes Rios</header> */}
+
         </Head>
-        
-        
+
+
         <body>
           <Main />
           <NextScript />

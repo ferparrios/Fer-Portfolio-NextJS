@@ -31,6 +31,7 @@ export const es = {
   "buttonNext": "Siguiente",
   "openSourceProjectsTitle": "Proyectos de código abierto:",
   "xexeCliProjectDescription": "Un paquete para crear rápidamente una aplicación React Native en tu dispositivo, incluye algunos paquetes como React Navigation, Axios y una organización para todos tus componentes, puedes elegir si quieres instalar uno de los paquetes o no.",
+  "easyToastPackage": "Un paquete para poder crear facilmente un Toast animado con variedad de personalizaciones",
   "connectTitle": "Conversemos:",
   "checkProject": "Mira el proyecto en:",
   "formMessage": "Si tienes cualquier duda o quieres que trabajemos juntos, déjame un mensaje y te responderé a la brevedad.",

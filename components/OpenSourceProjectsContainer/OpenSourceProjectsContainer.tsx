@@ -20,6 +20,17 @@ export const OpenSourceProjectsContainer = () => {
         (locale === "fr-CA" && fr.xexeCliProjectDescription),
       tecnologies: ["Javascript", "Node", "Git", "Npm publish"],
     },
+    {
+      image: "images/npm-package-image.png",
+      title: "React Native Easy Custom Toast",
+      githubLink: "https://github.com/adrialabs-dev/react-native-easy-toast",
+      productionLink: "https://www.npmjs.com/package/react-native-easy-custom-toast",
+      description:
+        (locale === "es-PE" && es.easyToastPackage) ||
+        (locale === "en-US" && en.easyToastPackage) ||
+        (locale === "fr-CA" && fr.easyToastPackage),
+      tecnologies: ["Javascript", "Node", "Git", "Npm publish", "React", "React Native"],
+    },
   ];
   const [currentPage, setCurrentPage] = useState(0);
   const isMobile = useMediaQuery({ maxWidth: 1024 });
@@ -42,7 +53,7 @@ export const OpenSourceProjectsContainer = () => {
 
   return (
     <section className="md:my-20" id="portfolio">
-      <div className="grid grid-cols-1">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         {openSourceProjectsData
           .slice(startIndex, endIndex)
           .map((item, index) => (
