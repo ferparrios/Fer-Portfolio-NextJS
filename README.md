@@ -1,6 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Fer - Next.js
+
+Este es un proyecto [Next.js](https://nextjs.org/) bootstrapped con [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Requisitos del Sistema
+
+- **Node.js**: >= 20.0.0 (recomendado: 20.x LTS)
+- **npm**: >= 10.0.0
 
 ## Getting Started
+
+### Configuración de Node.js
+
+Este proyecto está configurado para usar Node.js 20 o superior. Si usas nvm, puedes cambiar automáticamente a la versión correcta:
+
+```bash
+nvm use
+```
+
+### Instalación y Desarrollo
 
 First, run the development server:
 
